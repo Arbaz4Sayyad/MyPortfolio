@@ -184,7 +184,6 @@ a{
     transition:all 1s;
     animation: scaleImage 5s linear infinite;
     left: 70%;
-    transform: translateX(-50%);
   }
 
   .user-image img{
