@@ -171,6 +171,7 @@ a{
 
   .hero-section-right{
     position:relative;
+    top: -90px;
   }
 
   .absolute{
@@ -182,9 +183,13 @@ a{
     filter:grayscale(1);
     transition:all 1s;
     animation: scaleImage 5s linear infinite;
+    left: 70%;
+    transform: translateX(-50%);
   }
 
   .user-image img{
+    width: 100%; /* Ensure the image scales within the div */
+    height: auto;
     z-index:-9;
   }
 
