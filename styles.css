@@ -26,8 +26,8 @@
     display: flex;
     justify-content:space-between;
     align-items:center;
-
     padding-top:1rem;
+    
 }
 
 .logo{
@@ -46,9 +46,13 @@
 }
 
 .nav-items{
-    display:flex;
-    gap:2rem;
-    padding: 0 4em;
+
+    display: flex;
+    gap: 1.5rem; /* Reduced gap */
+    padding: 0 2em; /* Reduced padding */
+    align-items: center; /* Ensures proper alignment */
+    justify-content: center; /* Prevents stretching */
+    flex-wrap: nowrap; /* Ensures items don't wrap unnecessarily */
 }
 
 .nav-items div{
