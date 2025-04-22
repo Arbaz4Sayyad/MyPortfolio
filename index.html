@@ -29,7 +29,7 @@
                     
                     <div>
                       <a aria-label="Open Arbaz's resume in a new tab" 
-                      href="https://arbaz4sayyad.github.io/my-resume/sde.pdf" 
+                      href="https://arbaz4sayyad.github.io/my-resume/swe.pdf" 
                       target="_blank"
                       class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i>Resume</a> 
                     </div>
@@ -165,61 +165,79 @@
             <div class="project-container">
                 
 
-                      <div class="project-card" id="project1">
-                        <div class="project-number project-number-right">01</div>
-                        <div class="project-content project-content-left">
-                    
+                      <!-- Project 1 -->
+                        <div class="project-card" id="project1">
+                          <div class="project-number project-number-right">01</div>
+                          <div class="project-content project-content-left">
                             <div class="project-skills-container">
-                                <img class="project-skill" src="./images/stack/Java.svg" alt="" />
-                                <img class="project-skill" src="./images/stack/Spring.png" alt="" />
-                                <img class="project-skill" src="./images/stack/HTML.png" alt="" />
-                                <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                                <img class="project-skill" src="./images/stack/React.png" alt="" />
-                                <img class="project-skill" src="./images/stack/Redux.svg" alt="" />
-                                <img class="project-skill" src="./images/stack/AWS.png" alt="AWS" />
-                                <img class="project-skill" src="./images/stack/MongoDB.svg" alt="AWS" />
-                            </div>
-                    
-                            <h2 class="project-heading">Foodies - Online Food Delivery App</h2>
-                            <p class="project-sub-heading">
-                                <strong>Foodies</strong> is a full-stack food delivery application that enables users to browse restaurants, 
-                                add food items to their cart, and place secure online orders. The platform integrates AWS for cloud storage 
-                                and Razorpay for seamless payment processing. With a user-friendly interface, real-time order tracking, 
-                                and a robust backend built using Spring Boot and MongoDB, Foodies ensures a smooth and efficient food ordering experience.
-                            </p>
-                    
-                            <div class="btn-group">
-                                <button class="btn-pink btn-project">
-                                    <a href="https://github.com/Arbaz4Sayyad/FoodiesApp/blob/main/README.md" target="_blank">GitHub</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" id="project2">
-                      <div class="project-number project-number-leftt">02</div>
-                        <div class="project-content project-content-right">
-  
-                          <div class="project-skills-container">
                               <img class="project-skill" src="./images/stack/Java.svg" alt="" />
+                              <img class="project-skill" src="./images/stack/Spring.png" alt="" />
                               <img class="project-skill" src="./images/stack/HTML.png" alt="" />
                               <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                              <img class="project-skill" src="./images/stack/Javascript.svg" alt="" />
-                              <img class="project-skill" src="./images/stack/Bootstrap.svg" alt="" />
+                              <img class="project-skill" src="./images/stack/React.png" alt="" />
+                              <img class="project-skill" src="./images/stack/Redux.svg" alt="" />
                               <img class="project-skill" src="./images/stack/AWS.png" alt="AWS" />
-                          </div>
-  
-                            <h2 class="project-heading">Ellison Electronics</h2>
-                              <p class="project-sub-heading">
-                                  <strong>Ellison Electronics</strong> is a dynamic e-commerce platform specializing in the latest technology and gadgets. 
-                                  It offers an extensive catalog of electronic products with features such as AI-powered recommendations, secure payments, 
-                                  and seamless order tracking. Designed for scalability, the platform ensures a high-performance user experience.
-                              </p>
-                            <div class="btn-group">
-                              <button class="btn-pink btn-project"><a href="https://github.com/Arbaz4Sayyad/EcommerceApp_JDBC_Servlet_JSP/blob/main/README.md" target="_blank">GitHub</button></a>
+                              <img class="project-skill" src="./images/stack/MongoDB.svg" alt="MongoDB" />
                             </div>
+
+                            <h2 class="project-heading">Foodies - Online Food Delivery App</h2>
+                            <p class="project-sub-heading">
+                              <strong>Foodies</strong> is a full-stack food delivery application that enables users to browse restaurants,
+                              add food items to their cart, and place secure online orders. The platform integrates AWS for cloud storage
+                              and Razorpay for seamless payment processing. With a user-friendly interface, real-time order tracking,
+                              and a robust backend built using Spring Boot and MongoDB, Foodies ensures a smooth and efficient food ordering experience.
+                            </p>
+
+                            <div class="btn-group">
+                              <button class="btn-pink btn-project">
+                                <a href="https://github.com/Arbaz4Sayyad/FoodiesApp/blob/main/README.md" target="_blank">GitHub</a>
+                              </button>
+                              <button class="btn-pink btn-project" onclick="openVideoModal('foodies-video')">Demo Video</button>
+                            </div>
+
+                            <!-- Modal for the first project -->
+                              <div class="video-modal" id="foodies-video">
+                                <div class="video-modal-content">
+                                  <span class="close-btn" onclick="closeVideoModal('foodies-video')">&times;</span>
+                                  <iframe src="https://drive.google.com/file/d/1MKTG0K-Msn98wtnfRDeN2f40fF8ryWcW/preview" width="100%" height="400" allow="autoplay"></iframe>
+                                </div>
+                              </div>
                           </div>
                         </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card" id="project2">
+                      <div class="project-number project-number-leftt">02</div>
+                      <div class="project-content project-content-right">
+                        <div class="project-skills-container">
+                          <img class="project-skill" src="./images/stack/Java.svg" alt="" />
+                          <img class="project-skill" src="./images/stack/HTML.png" alt="" />
+                          <img class="project-skill" src="./images/stack/CSS.png" alt="" />
+                          <img class="project-skill" src="./images/stack/Javascript.svg" alt="" />
+                          <img class="project-skill" src="./images/stack/Bootstrap.svg" alt="" />
+                          <img class="project-skill" src="./images/stack/AWS.png" alt="AWS" />
+                        </div>
+
+                        <h2 class="project-heading">Ellison Electronics</h2>
+                        <p class="project-sub-heading">
+                          <strong>Ellison Electronics</strong> is a dynamic e-commerce platform specializing in the latest technology and gadgets.
+                          It offers an extensive catalog of electronic products with features such as AI-powered recommendations, secure payments,
+                          and seamless order tracking. Designed for scalability, the platform ensures a high-performance user experience.
+                        </p>
+
+                        <div class="btn-group">
+                          <button class="btn-pink btn-project"><a href="https://github.com/Arbaz4Sayyad/EcommerceApp_JDBC_Servlet_JSP/blob/main/README.md" target="_blank">GitHub</a></button>
+                          <button class="btn-pink btn-project" onclick="openVideoModal('ellison-video')">Demo Video</button>
+                        </div>
+
+                        <div class="video-modal" id="ellison-video">
+                          <div class="video-modal-content">
+                            <span class="close-btn" onclick="closeVideoModal('ellison-video')">&times;</span>
+                            <iframe src="https://drive.google.com/file/d/1NgrKjzRKydkXtfPCIZwWRFL659pOpHXa/preview" width="100%" height="400" allow="autoplay"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
                 <!-- <div class="project-card" id="project2">
                   <div class="project-number project-number-left">02</div>
@@ -248,30 +266,42 @@
           
       
           
-                <div class="project-card" id="project3">
-                  <div class="project-number project-number-right">03</div>
-                  <div class="project-content project-content-left">
-                    <div class="project-skill-container">
-                      <img class="project-skill" src="./images/stack/HTML.png" alt="" />
-                      <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                      <img class="project-skill" src="./images/stack/Javascript.svg" alt="" />
-                      <img class="project-skill" src="./images/stack/React.png" alt="" />
-                      <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="" />
-                      <img class="project-skill" src="./images/stack/Tailwind.png" alt="" />
-                    </div>
-                    <h2 class="project-heading">Memories Social Media App</h2>
+                <!-- Project 3 -->
+                    <div class="project-card" id="project3">
+                      <div class="project-number project-number-right">03</div>
+                      <div class="project-content project-content-left">
+                        <div class="project-skills-container">
+                          <img class="project-skill" src="./images/stack/MERN.png" alt="MERN" />
+                          <img class="project-skill" src="./images/stack/React.png" alt="React" />
+                          <img class="project-skill" src="./images/stack/NodeJs.svg" alt="Node.js" />
+                          <img class="project-skill" src="./images/stack/Express.png" alt="Express" />
+                          <img class="project-skill" src="./images/stack/MongoDB.svg" alt="MongoDB" />
+                          <img class="project-skill" src="./images/stack/Javascript.svg" alt="JavaScript" />
+                          <img class="project-skill" src="./images/stack/HTML.png" alt="HTML" />
+                          <img class="project-skill" src="./images/stack/CSS.png" alt="CSS" />
+                        </div>
+
+                        <h2 class="project-heading">Memories App</h2>
                         <p class="project-sub-heading">
-                            <strong>Memories</strong> is a dynamic social media application designed to let users share and cherish their life's special moments. 
-                            It enables users to create, edit, and delete posts, upload images, and engage with content through likes and comments. 
-                            The app features <strong>secure user authentication</strong>, including <strong>social login via Google</strong>, ensuring a seamless and personalized experience.  
-                            Built with a <strong>MERN stack (MongoDB, Express, React, Node.js)</strong>, it offers real-time updates and a modern, responsive UI.  
-                            <strong>Memories</strong> fosters a connected digital space where users can relive and celebrate their most treasured experiences.
+                          <strong>Memories App</strong> is a MERN stack social media application where users can create, edit, like, and delete memory posts. Built with a focus on CRUD operations, JWT authentication, and RESTful API design, it provides a sleek UI and real-time feedback for enhanced user interaction.
                         </p>
-                    <div class="btn-group">
-                      <button class="btn-pink btn-project"><a href="https://github.com/Arbaz4Sayyad/Memories-App/blob/main/README.md" target="_blank">GitHub</button></a>
+
+                        <div class="btn-group">
+                          <button class="btn-pink btn-project">
+                            <a href="https://github.com/Arbaz4Sayyad/Memories-App" target="_blank">GitHub</a>
+                          </button>
+                          <button class="btn-pink btn-project" onclick="openVideoModal('memories-video')">Demo Video</button>
+                        </div>
+
+                        <div class="video-modal" id="memories-video">
+                          <div class="video-modal-content">
+                            <span class="close-btn" onclick="closeVideoModal('memories-video')">&times;</span>
+                            <iframe src="https://drive.google.com/file/d/1NaR0m4uLxJ579O_WMY4MTAEd8vHl5R6y/preview" width="100%" height="400" allow="autoplay"></iframe>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
+
 
                 <!-- <div class="project-card" id="project4">
                   <div class="project-number project-number-left">03</div>
@@ -307,7 +337,7 @@
           <div class="experience-container">
        
             <div class="experience-card">
-              <h3 class="experience-title">🚀 Associate Software Engineer - <span>AJ Techsoft Pvt. Ltd.</span></h3>
+              <h3 class="experience-title">🚀 Software Engineer - <span>AJ Techsoft Pvt. Ltd.</span></h3>
               <p class="experience-duration"><i class="fa-solid fa-calendar"></i> Mar 2024 - Present</p>
               <ul class="experience-description">
                   <li><i class="fa-solid fa-code"></i> Developed scalable Java applications using <strong>Spring Boot</strong>, <strong>Hibernate</strong>, <strong>React</strong>, and <strong>Angular</strong>.</li>
@@ -476,7 +506,7 @@
                 </div>
 
                 <div>
-                  <a aria-label="Open Arbaz's resume in a new tab" href="https://arbaz4sayyad.github.io/my-resume/sde.pdf" target="_blank"
+                  <a aria-label="Open Arbaz's resume in a new tab" href="https://arbaz4sayyad.github.io/my-resume/swe.pdf" target="_blank"
                     class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i>Resume</a> 
                 </div> 
 
@@ -521,6 +551,19 @@
       backSpeed: 80,
       backDelay: 1000,
     });
+
+
+
+    function openVideoModal(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+
+  function closeVideoModal(id) {
+    const modal = document.getElementById(id);
+    const iframe = modal.querySelector("iframe");
+    modal.style.display = 'none';
+    iframe.src = iframe.src; // reset video on close
+  }
   </script>
 </body>
 </html>
