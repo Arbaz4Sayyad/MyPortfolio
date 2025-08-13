@@ -1507,3 +1507,101 @@ footer{
     font-size: 0.75rem;
   }
 }
+
+
+
+/* ================== RESPONSIVE DESIGN ================== */
+
+/* For tablets and below */
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-section-left, .hero-section-right {
+    width: 100%;
+  }
+
+  .project-card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .project-content {
+    width: 100%;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-container-left, .skill-container-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .experience-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-section-heading {
+    font-size: 1.5rem;
+  }
+
+  .hero-section-sub-heading {
+    font-size: 1.2rem;
+  }
+
+  .project-card {
+    margin: 1rem 0;
+  }
+
+  .project-heading {
+    font-size: 1.3rem;
+  }
+
+  .skills-logo {
+    width: 50px;
+    height: auto;
+  }
+
+  footer .link-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
