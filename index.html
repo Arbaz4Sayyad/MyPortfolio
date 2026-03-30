@@ -53,16 +53,16 @@
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6 md:px-12">
       <div
         class="max-w-7xl mx-auto flex justify-between items-center bg-white/70 dark:bg-slate-900/70 backdrop-blur-md rounded-2xl px-6 py-3 border border-white/20 dark:border-white/10 shadow-lg">
-        <div class="flex items-center gap-3">
+        <a href="#home" class="flex items-center gap-3 group transition-all">
           <img src="./images/userAsset/NavLogo_cropped-removebg.png"
-            class="w-10 hover:rotate-12 transition-transform duration-300" alt="Logo">
+            class="w-10 group-hover:rotate-12 transition-transform duration-300" alt="Logo">
           <div class="text-xl font-display font-extrabold tracking-tight md:hidden lg:block">
             <span class="text-primary italic">A</span>rbaz Sayyad
           </div>
-        </div>
+        </a>
 
         <div class="hidden md:flex items-center gap-8 font-medium text-slate-600 dark:text-slate-300">
-          <a href="#home" class="hover:text-primary transition-colors md:hidden lg:inline-block">Home</a>
+          <a href="#about" class="hover:text-primary transition-colors">About Me</a>
           <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
           <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
           <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
@@ -106,16 +106,15 @@
             <span class="text-2xl md:text-4xl opacity-80"><span class="role text-primary"></span></span>
           </h1>
           <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed text-justify">
-            I am an MCA graduate from Savitribai Phule Pune University with 2+ years of experience as a Software
-            Engineer, driven by a strong problem-solving mindset and a passion for clean, efficient code.
-            <br><br>
-            I specialize in building scalable, high-performance web applications using Java, Spring Boot, React,
-            Angular, and AWS, with expertise in backend microservices, REST APIs, and cloud-native solutions.
-          </p>
+            I build robust, scalable, and high-performance full-stack applications with Java, Spring Boot, and modern
+            cloud technologies. Passionate about crafting clean architecture and delivering exceptional digital
+            experiences.
+            <br>
+
 
           <div class="flex flex-wrap gap-4 pt-4">
             <a href="#contactme"
-              class="group relative px-8 py-4 bg-primary text-white font-bold rounded-2xl overflow-hidden shadow-xl hover:shadow-primary/30 transition-all flex items-center gap-2">
+              class="group relative px-6 py-3 bg-primary text-white font-bold rounded-2xl overflow-hidden shadow-xl hover:shadow-primary/30 transition-all flex items-center gap-2">
               <span class="relative z-10 transition-transform group-hover:translate-x-1">Hire me</span>
               <i class="fas fa-paper-plane relative z-10 transition-transform group-hover:translate-x-1"></i>
               <div
@@ -123,67 +122,43 @@
               </div>
             </a>
             <a href="https://github.com/Arbaz4Sayyad" target="_blank"
-              class="px-8 py-4 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all flex items-center gap-3">
-              <i class="fab fa-github text-2xl"></i> GitHub
+              class="px-6 py-3 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all flex items-center gap-3">
+              <i class="fab fa-github text-xl"></i> GitHub
             </a>
             <a href="https://www.linkedin.com/in/arbaz-sayyad" target="_blank"
-              class="px-8 py-4 bg-[#0077B5] text-white font-bold rounded-2xl shadow-lg hover:brightness-110 transition-all flex items-center gap-2">
+              class="px-6 py-3 bg-[#0077B5] text-white font-bold rounded-2xl shadow-lg hover:brightness-110 transition-all flex items-center gap-2">
               <i class="fab fa-linkedin"></i> LinkedIn
             </a>
           </div>
 
-          <!-- Summary Highlights -->
-          <div class="summary-highlights flex flex-wrap gap-4 py-4 reveal-up">
-            <div
-              class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
-              <i class="fas fa-map-marker-alt text-primary"></i>
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Pune, India</span>
-            </div>
-            <div
-              class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
-              <i class="fas fa-briefcase text-primary"></i>
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Software Engineer</span>
-            </div>
-            <div
-              class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
-              <i class="fas fa-graduation-cap text-primary"></i>
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Computer Science</span>
-            </div>
-            <div
-              class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
-              <i class="fas fa-language text-primary"></i>
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300">English, Hindi, Marathi</span>
-            </div>
-          </div>
-
           <!-- Hero Stats -->
-          <div class="hero-stats flex flex-wrap items-center gap-6 md:gap-10 pt-4 reveal-up">
+          <div class="hero-stats flex flex-wrap items-center gap-6 md:gap-8 pt-2 stagger-hero">
             <div class="stat-item">
               <div class="flex items-baseline">
-                <span class="stat-number text-4xl md:text-5xl font-display font-black text-primary counter"
+                <span class="stat-number text-3xl md:text-4xl font-display font-black text-primary counter"
                   data-count="2">0</span>
-                <span class="stat-suffix text-2xl font-bold text-primary ml-1">+</span>
+                <span class="stat-suffix text-xl font-bold text-primary ml-1">+</span>
               </div>
               <span
                 class="stat-label text-xs md:text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Years
                 Exp.</span>
             </div>
-            <div class="stat-divider w-px h-12 bg-slate-200 dark:bg-slate-800 hidden sm:block"></div>
+            <div class="stat-divider w-px h-10 bg-slate-200 dark:bg-slate-800 hidden sm:block"></div>
             <div class="stat-item">
               <div class="flex items-baseline">
-                <span class="stat-number text-4xl md:text-5xl font-display font-black text-primary counter"
+                <span class="stat-number text-3xl md:text-4xl font-display font-black text-primary counter"
                   data-count="10">0</span>
-                <span class="stat-suffix text-2xl font-bold text-primary ml-1">+</span>
+                <span class="stat-suffix text-xl font-bold text-primary ml-1">+</span>
               </div>
               <span
                 class="stat-label text-xs md:text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Projects</span>
             </div>
-            <div class="stat-divider w-px h-12 bg-slate-200 dark:bg-slate-800 hidden sm:block"></div>
+            <div class="stat-divider w-px h-10 bg-slate-200 dark:bg-slate-800 hidden sm:block"></div>
             <div class="stat-item">
               <div class="flex items-baseline">
-                <span class="stat-number text-4xl md:text-5xl font-display font-black text-primary counter"
+                <span class="stat-number text-3xl md:text-4xl font-display font-black text-primary counter"
                   data-count="15">0</span>
-                <span class="stat-suffix text-2xl font-bold text-primary ml-1">+</span>
+                <span class="stat-suffix text-xl font-bold text-primary ml-1">+</span>
               </div>
               <span
                 class="stat-label text-xs md:text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Technologies</span>
@@ -194,12 +169,12 @@
         <div class="flex-1 relative stagger-hero flex justify-center items-center">
           <div class="relative w-72 md:w-[22rem] lg:w-[26rem] aspect-square -mt-20 md:-mt-32">
             <!-- Background Animated Blobs -->
-            <div class="hero-blob absolute -top-10 -left-10 w-64 h-64 animate-pulse-slow opacity-60 blur-3xl"></div>
-            <div class="hero-blob absolute -bottom-10 -right-10 w-72 h-72 animate-pulse opacity-40 blur-3xl"
-              style="animation-delay: 1s;"></div>
+            <div class="hero-blob absolute -top-10 -left-10 w-64 h-64 opacity-50"></div>
+            <div class="hero-blob absolute -bottom-10 -right-10 w-72 h-72 opacity-30" style="animation-delay: 1s;">
+            </div>
 
             <!-- Rotating Aesthetic Ring -->
-            <div class="absolute -inset-4 rotating-border rounded-full opacity-30 blur-[2px]"></div>
+            <div class="absolute -inset-4 rotating-border rounded-full opacity-40"></div>
 
             <!-- Glow Aura -->
             <div class="absolute inset-0 image-aura rounded-full opacity-50 scale-125"></div>
@@ -224,6 +199,137 @@
               style="animation-delay: -1s;" alt="">
             <img src="./images/userAsset/circle.png" class="absolute -bottom-10 left-10 w-16 floating-element z-20"
               style="animation-delay: -0.5s;" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
+      <section id="about" class="py-20 reveal scroll-mt-32 relative">
+        <div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-3/5 space-y-8">
+            <div class="space-y-4">
+              <h2 class="text-4xl md:text-6xl font-display font-black text-slate-800 dark:text-slate-100">
+                Passionate Engineer. <br> <span class="text-primary">Creative Problem Solver.</span>
+              </h2>
+              <div class="w-20 h-2 bg-primary rounded-full"></div>
+            </div>
+
+            <div class="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
+              <p>
+                My journey into software engineering began with a profound curiosity about how complex systems work
+                under the hood.
+                As an <span class="font-bold text-slate-800 dark:text-slate-200">MCA graduate from Savitribai Phule Pune
+                  University</span>,
+                I have dedicated myself to mastering the art of building scalable, high-performance web applications.
+              </p>
+              <p>
+                With over <span class="font-bold text-slate-800 dark:text-slate-200">2+ years of professional
+                  experience</span>
+                at AJ Techsoft, I specialize in the <span class="text-primary font-semibold">Java & Spring Boot
+                  ecosystem</span>,
+                architecting robust backend microservices and seamless cloud-native solutions on AWS.
+              </p>
+              <p>
+                Beyond code, I am driven by the impact of technology on real-world problems. Whether it's optimizing
+                database
+                performance by 40% or building AI-powered productivity tools, I strive for excellence in every line of
+                code
+                I write. My philosophy is simple: <span class="italic">Build with purpose, code with passion.</span>
+              </p>
+            </div>
+
+            <div class="summary-highlights grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 reveal">
+              <div
+                class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:-translate-y-1">
+                <i class="fas fa-map-marker-alt text-primary"></i>
+                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Pune, India</span>
+              </div>
+              <div
+                class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:-translate-y-1">
+                <i class="fas fa-briefcase text-primary"></i>
+                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Software Engineer</span>
+              </div>
+              <div
+                class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:-translate-y-1">
+                <i class="fas fa-graduation-cap text-primary"></i>
+                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Computer Science</span>
+              </div>
+              <div
+                class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:-translate-y-1">
+                <i class="fas fa-language text-primary"></i>
+                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">English, Hindi, Marathi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-2/5 w-full">
+            <div
+              class="glass-card p-10 rounded-[2.5rem] shadow-2xl relative group hover:border-primary/50 transition-all duration-500 overflow-hidden">
+              <div
+                class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all">
+              </div>
+
+              <h3 class="text-2xl font-display font-bold mb-8 flex items-center gap-3">
+                <i class="fas fa-id-card text-primary text-xl"></i> Quick Highlights
+              </h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start gap-5">
+                  <div
+                    class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shrink-0">
+                    <i class="fas fa-history"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">Experience</h4>
+                    <p class="font-bold text-slate-800 dark:text-slate-100 text-lg">2+ Years in SDE</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                  <div
+                    class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shrink-0">
+                    <i class="fas fa-university"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">Education</h4>
+                    <p class="font-bold text-slate-800 dark:text-slate-100 text-lg">MCA - SPPU Pune</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                  <div
+                    class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shrink-0">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">Core Tech</h4>
+                    <p class="font-bold text-slate-800 dark:text-slate-100 text-lg">Java, Spring, AWS</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                  <div
+                    class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shrink-0">
+                    <i class="fas fa-mountain"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">Goal</h4>
+                    <p class="font-bold text-slate-800 dark:text-slate-100 text-lg">Scale & Innovation</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-slate-500 font-medium">Availability</span>
+                  <span class="flex items-center gap-2 text-green-500 font-bold">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Open to Work
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -628,7 +734,8 @@
                     </li>
                     <li class="flex items-start gap-3">
                       <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
-                      <span>Increased test coverage to 85% using <strong>JUnit</strong>, reducing production bugs.</span>
+                      <span>Increased test coverage to 85% using <strong>JUnit</strong>, reducing production
+                        bugs.</span>
                     </li>
                     <li class="flex items-start gap-3">
                       <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
@@ -974,7 +1081,7 @@
 
         <div
           class="flex flex-wrap justify-center gap-8 text-slate-500 hover:text-slate-900 transition-colors font-medium">
-          <a href="#home" class="hover:text-primary">Home</a>
+          <a href="#about" class="hover:text-primary">About Me</a>
           <a href="#skills" class="hover:text-primary">Skills</a>
           <a href="#projects" class="hover:text-primary">Projects</a>
           <a href="#experience" class="hover:text-primary">Experience</a>
@@ -1040,7 +1147,7 @@
     </button>
     <div
       class="flex flex-col items-center gap-6 text-2xl font-display font-bold text-slate-800 dark:text-white text-center">
-      <a href="#home" class="mobile-link hover:text-primary transition-colors">Home</a>
+      <a href="#about" class="mobile-link hover:text-primary transition-colors">About Me</a>
       <a href="#skills" class="mobile-link hover:text-primary transition-colors">Skills</a>
       <a href="#projects" class="mobile-link hover:text-primary transition-colors">Projects</a>
       <a href="#experience" class="mobile-link hover:text-primary transition-colors">Experience</a>

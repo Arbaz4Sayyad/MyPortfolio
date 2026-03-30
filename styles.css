@@ -72,8 +72,8 @@ section {
 
 /* Hero Image Enhancement */
 .image-aura {
-  background: radial-gradient(circle, rgba(13, 148, 136, 0.4) 0%, rgba(20, 184, 166, 0) 70%);
-  filter: blur(60px);
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.3) 0%, rgba(20, 184, 166, 0) 70%);
+  filter: blur(40px);
 }
 
 .rotating-border {
@@ -87,8 +87,8 @@ section {
 }
 
 .hero-blob {
-  background: linear-gradient(135deg, rgba(13, 148, 136, 0.25), rgba(20, 184, 166, 0.25));
-  filter: blur(50px);
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.2), rgba(20, 184, 166, 0.2));
+  filter: blur(40px);
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
 }
 /* Hero Stats Styles */

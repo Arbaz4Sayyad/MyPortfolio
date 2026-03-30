@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
         snap: { innerText: 1 },
         scrollTrigger: {
           trigger: counter,
-          start: "top 90%",
+          start: "top 100%",
         },
       });
     });
@@ -206,17 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Refresh ScrollTrigger after all initializations
     ScrollTrigger.refresh();
 
-    // 10. Reveal Up Animation for stats
-    gsap.from(".reveal-up", {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: ".hero-stats",
-        start: "top 90%",
-      }
-    });
+
 
     // 10. Mobile Menu Logic
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
