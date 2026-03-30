@@ -1,630 +1,1070 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website - Arbaz Sayyad</title>
-    <link rel="stylesheet" href="styles.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbaz Sayyad - Software Engineer</title>
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            primary: '#0d9488', // Teal-600
+            secondary: '#14b8a6', // Teal-500
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    
-    <div id="wrapper">
 
-        <div class="container">
-            <div class="navbar">
-                
-                <div class="logo-container">
-                    <img src="./images/userAsset/NavLogo.png" class="logo">
-                    <div class="logo-text">rbaz Sayyad</div>
-                </div>
-                
-                <div class="nav-items">
-                    <div><a href="#home">Home</a></div>
-                    <div><a href="#skills">Skills</a></div>
-                    <div><a href="#projects">Projects</a></div>
-                    <div><a href="#experience">Experience</a></div>
-                    <div><a href="#research">Publications</a></div>
-                    
-                    <div>
-                      <a aria-label="Open Arbaz's resume in a new tab" 
-                      href="https://arbaz4sayyad.github.io/my-resume/sde-backend.pdf" 
-                      target="_blank"
-                      class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i>Resume</a> 
-                    </div>
-                    
-                    <div><a href="#contactme">Contact Me</a></div>
-                </div>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
 
-            </div>
+  <div id="wrapper" class="relative overflow-x-hidden">
 
-            <div class="hero-section" id="home">
-
-                <div class="faded-text"></div>
-    
-                <div class="hero-section-left">
-                    <div class="hero-section-heading">Hi! Arbaz Sayyad Here</div>
-                    
-                    <div class="hero-section-heading hero-section-sub-heading">
-                        I am a <span class="role"></span>
-                    </div>
-  
-
-                  <!-- <div class="hero-section-description" style="text-align: justify; ">
-                    I am an MCA graduate from Savitribai Phule Pune University, 
-                    having 1.5 years of experience as a Associate Software Engineer with a strong problem-solving mindset and a deep love for coding.   
-                    <br><br>
-                    With experience in full-stack development, I specialize in building 
-                    scalable and high-performance web applications using modern technologies. 
-                    My expertise spans Java, Spring Boot, React, Angular, and cloud platforms like AWS.
-                    <br><br>
-                    Looking for an opportunity to work in a challenging position combining my skills in
-                    Software Engineering, which provides professional development, 
-                    interesting experiences, and personal growth.
-                  </div> -->
-
-                  <div class="hero-section-description" style="text-align: justify;">
-                    I am an MCA graduate from Savitribai Phule Pune University with 1.5 years of experience as a Jr. Software Engineer, driven by a strong problem-solving mindset and a passion for clean, efficient code.
-                    <br><br>
-                    I specialize in building scalable, high-performance web applications using Java, Spring Boot, React, Angular, and AWS, with expertise in backend microservices, REST APIs, and cloud-native solutions.
-                    <br><br>
-                    My key projects include a <b>Claims Processing System</b> to automate insurance workflows and a <b>Credit Score Analysis Tool</b> that assesses user credit health through dynamic scoring models—both built as robust, end-to-end solutions.
-                    <br><br>
-                    I’m seeking a challenging role that fosters growth, innovation, and impactful software development in a collaborative environment.
-                  </div>
-
- 
-                    <!-- <div class="social-media-links">
-                      <a href="https://www.linkedin.com/in/arbaz-sayyad/" target="_blank"><i class="fa-brands fa-linkedin icon" style="color: orange; margin-right: 15px;" ></i></a>
-                      <a href="https://github.com/Arbaz4Sayyad" target="_blank"><i class="fa-brands fa-github icon" style="color: orange; margin-right: 15px;"></i></a>
-                      <a href="https://twitter.com/your_twitter_handle" target="_blank"><i class="fa-brands fa-twitter icon" style="color: orange; margin-right: 15px;"></i></a>
-                      <a href="https://www.instagram.com/your_instagram_handle/" target="_blank"><i class="fa-brands fa-instagram icon" style="color: orange; margin-right: 15px;"></i></a>
-                      <a href="mailto:arbaz4sayyad@gmail.com?subject=Hiring Inquiry&body=Hi Arbaz, I would like to discuss a potential job opportunity with you." target="_blank"><i class="fa-regular fa-envelope icon" style="color: orange;"></i></a>
-                         </div> -->
-                    <!-- <div class="btn-pink" id="btn-hire-me" > 
-                      <a href="https://arbaz4sayyad.github.io/my-resume/sde-backend.pdf" target="_blank" >Resume</a>
-                    </div> -->
-
-                    <div class="btn-container">
-                      <div class="btn-pink" id="btn-hire-me"> 
-                          <a href="#contactme">
-                            <i class="fa-solid fa-envelope"></i> Hire me</a>
-                      </div>
-                      <div class="btn-pink" id="btn-github">
-                          <a href="https://github.com/Arbaz4Sayyad" target="_blank">
-                              <i class="fa-brands fa-github"></i> GitHub
-                          </a>
-                      </div>
-                      <div class="btn-pink" id="btn-linkedin">
-                        <a href="https://www.linkedin.com/in/arbaz-sayyad" target="_blank">
-                          <i class="fa-brands fa-linkedin"></i> LinkedIn
-                        </a>
-                      </div>
-                  </div>
-
-                </div>
-    
-                <div class="hero-section-right">
-                    <div class="absolute icons icon-dots">
-                        <img src="./images/userAsset/dots.png" alt="" />
-                      </div>
-                      <div class="absolute icons icon-cube">
-                        <img src="./images/userAsset/cube.png" alt="" />
-                      </div>
-                      <div class="absolute icons icon-circle">
-                        <img src="./images/userAsset/circle.png" alt="" />
-                      </div>
-                      <div class="absolute icons icon-zigzag">
-                        <img src="./images/userAsset/zigzags.png" alt="" />
-                      </div>
-                      <div class="absolute icons icon-plus">
-                        <img src="./images/userAsset/plus.png" alt="" />
-                      </div>
-                      <div class="user-image">
-                        <img src="./images/userAsset/UserImage.png" alt="" />
-                      </div>
-                </div>
-    
-            </div>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6 md:px-12">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center bg-white/70 dark:bg-slate-900/70 backdrop-blur-md rounded-2xl px-6 py-3 border border-white/20 dark:border-white/10 shadow-lg">
+        <div class="flex items-center gap-3">
+          <img src="./images/userAsset/NavLogo_cropped-removebg.png"
+            class="w-10 hover:rotate-12 transition-transform duration-300" alt="Logo">
+          <div class="text-xl font-display font-extrabold tracking-tight md:hidden lg:block">
+            <span class="text-primary italic">A</span>rbaz Sayyad
+          </div>
         </div>
 
-        <div id="skills" class="container skills-container ">
-          <div class="skill-fade-text">Skills</div>
+        <div class="hidden md:flex items-center gap-8 font-medium text-slate-600 dark:text-slate-300">
+          <a href="#home" class="hover:text-primary transition-colors md:hidden lg:inline-block">Home</a>
+          <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+          <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+          <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+          <a href="#education" class="hover:text-primary transition-colors">Education</a>
+          <a href="#research" class="hover:text-primary transition-colors">Publications</a>
+          <a href="https://arbaz4sayyad.github.io/my-resume/sde-backend.pdf" target="_blank"
+            class="flex items-center gap-2 hover:text-primary transition-colors"><i class="fas fa-file-pdf"></i>
+            Resume</a>
+          <a href="#contactme"
+            class="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-md">Hire
+            Me</a>
+          <button id="themeToggle"
+            class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-200">
+            <i class="fas fa-moon dark:hidden text-lg"></i>
+            <i class="fas fa-sun hidden dark:inline text-lg text-yellow-500"></i>
+          </button>
+        </div>
+        <button class="md:hidden text-2xl text-slate-800 dark:text-white" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
 
-          <div class="skill-container-left">
-            <h2 class="skill-heading">
-              <span class="caps">M</span>e and
-              <br />
-              MyTech Stack
+    <!-- Hero Section -->
+    <main class="max-w-7xl mx-auto px-6 md:px-12">
+      <section id="home"
+        class="min-h-screen pt-32 pb-20 flex flex-col-reverse lg:flex-row items-center gap-16 scroll-mt-32">
+
+        <div class="flex-1 space-y-8 stagger-hero">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-semibold">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            Available for Opportunities
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-display font-black leading-tight">
+            Hi, I'm <span class="gradient-text">Arbaz Sayyad</span> <br>
+            <span class="text-2xl md:text-4xl opacity-80"><span class="role text-primary"></span></span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed text-justify">
+            I am an MCA graduate from Savitribai Phule Pune University with 2+ years of experience as a Software
+            Engineer, driven by a strong problem-solving mindset and a passion for clean, efficient code.
+            <br><br>
+            I specialize in building scalable, high-performance web applications using Java, Spring Boot, React,
+            Angular, and AWS, with expertise in backend microservices, REST APIs, and cloud-native solutions.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="#contactme"
+              class="group relative px-8 py-4 bg-primary text-white font-bold rounded-2xl overflow-hidden shadow-xl hover:shadow-primary/30 transition-all flex items-center gap-2">
+              <span class="relative z-10 transition-transform group-hover:translate-x-1">Hire me</span>
+              <i class="fas fa-paper-plane relative z-10 transition-transform group-hover:translate-x-1"></i>
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-primary to-secondary transition-opacity group-hover:opacity-100 opacity-0">
+              </div>
+            </a>
+            <a href="https://github.com/Arbaz4Sayyad" target="_blank"
+              class="px-8 py-4 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all flex items-center gap-3">
+              <i class="fab fa-github text-2xl"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/arbaz-sayyad" target="_blank"
+              class="px-8 py-4 bg-[#0077B5] text-white font-bold rounded-2xl shadow-lg hover:brightness-110 transition-all flex items-center gap-2">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+
+          <!-- Summary Highlights -->
+          <div class="summary-highlights flex flex-wrap gap-4 py-4 reveal-up">
+            <div
+              class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
+              <i class="fas fa-map-marker-alt text-primary"></i>
+              <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Pune, India</span>
+            </div>
+            <div
+              class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
+              <i class="fas fa-briefcase text-primary"></i>
+              <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Software Engineer</span>
+            </div>
+            <div
+              class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
+              <i class="fas fa-graduation-cap text-primary"></i>
+              <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Computer Science</span>
+            </div>
+            <div
+              class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
+              <i class="fas fa-language text-primary"></i>
+              <span class="text-sm font-bold text-slate-700 dark:text-slate-300">English, Hindi, Marathi</span>
+            </div>
+          </div>
+
+          <!-- Hero Stats -->
+          <div class="hero-stats flex flex-wrap items-center gap-6 md:gap-10 pt-4 reveal-up">
+            <div class="stat-item">
+              <div class="flex items-baseline">
+                <span class="stat-number text-4xl md:text-5xl font-display font-black text-primary counter"
+                  data-count="2">0</span>
+                <span class="stat-suffix text-2xl font-bold text-primary ml-1">+</span>
+              </div>
+              <span
+                class="stat-label text-xs md:text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Years
+                Exp.</span>
+            </div>
+            <div class="stat-divider w-px h-12 bg-slate-200 dark:bg-slate-800 hidden sm:block"></div>
+            <div class="stat-item">
+              <div class="flex items-baseline">
+                <span class="stat-number text-4xl md:text-5xl font-display font-black text-primary counter"
+                  data-count="10">0</span>
+                <span class="stat-suffix text-2xl font-bold text-primary ml-1">+</span>
+              </div>
+              <span
+                class="stat-label text-xs md:text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Projects</span>
+            </div>
+            <div class="stat-divider w-px h-12 bg-slate-200 dark:bg-slate-800 hidden sm:block"></div>
+            <div class="stat-item">
+              <div class="flex items-baseline">
+                <span class="stat-number text-4xl md:text-5xl font-display font-black text-primary counter"
+                  data-count="15">0</span>
+                <span class="stat-suffix text-2xl font-bold text-primary ml-1">+</span>
+              </div>
+              <span
+                class="stat-label text-xs md:text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Technologies</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-1 relative stagger-hero flex justify-center items-center">
+          <div class="relative w-72 md:w-[22rem] lg:w-[26rem] aspect-square -mt-20 md:-mt-32">
+            <!-- Background Animated Blobs -->
+            <div class="hero-blob absolute -top-10 -left-10 w-64 h-64 animate-pulse-slow opacity-60 blur-3xl"></div>
+            <div class="hero-blob absolute -bottom-10 -right-10 w-72 h-72 animate-pulse opacity-40 blur-3xl"
+              style="animation-delay: 1s;"></div>
+
+            <!-- Rotating Aesthetic Ring -->
+            <div class="absolute -inset-4 rotating-border rounded-full opacity-30 blur-[2px]"></div>
+
+            <!-- Glow Aura -->
+            <div class="absolute inset-0 image-aura rounded-full opacity-50 scale-125"></div>
+
+            <!-- Image Container -->
+            <div
+              class="w-full h-full rounded-full overflow-hidden border-8 border-white/50 dark:border-slate-900/50 shadow-2xl relative z-10 group backdrop-blur-sm">
+              <img src="./images/userAsset/UserImage.png"
+                class="w-full h-full object-cover object-top grayscale-[30%] hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-105 origin-top"
+                alt="User Image">
+
+              <!-- Glass Overlay on Hover -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              </div>
+            </div>
+
+            <!-- Floating components preservation -->
+            <img src="./images/userAsset/dots.png"
+              class="absolute -top-6 -right-6 w-16 opacity-40 floating-element z-20" alt="">
+            <img src="./images/userAsset/cube.png" class="absolute bottom-10 -right-10 w-16 floating-element z-20"
+              style="animation-delay: -1s;" alt="">
+            <img src="./images/userAsset/circle.png" class="absolute -bottom-10 left-10 w-16 floating-element z-20"
+              style="animation-delay: -0.5s;" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-20 reveal scroll-mt-32">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2 space-y-6">
+            <h2 class="text-4xl md:text-6xl font-display font-black text-slate-800 dark:text-slate-100">
+              <span class="text-primary tracking-tighter">M</span>e and <br> MyTech Stack
             </h2>
+            <div class="w-20 h-2 bg-primary rounded-full"></div>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+              Seeking a challenging role that fosters growth, innovation, and impactful software development in a
+              collaborative environment.
+            </p>
+          </div>
+          <div class="md:w-1/2 grid grid-cols-4 sm:grid-cols-5 gap-6">
+            <img src="./images/stack/Java.svg"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="Java">
+            <img src="images/stack/Spring.png"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="Spring">
+            <img src="./images/stack/HTML.png"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="HTML">
+            <img src="./images/stack/CSS.png"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="CSS">
+            <img src="./images/stack/Javascript.svg"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="JS">
+            <img src="./images/stack/Tailwind.png"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="Tailwind">
+            <img src="./images/stack/React.png"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="React">
+            <img src="./images/stack/Angular.png"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="Angular">
+            <img src="./images/stack/NodeJs.svg"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="Node">
+            <img src="./images/stack/Github.svg"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="Github">
+            <img src="./images/stack/AWS.png"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="AWS">
+            <img src="./images/stack/Docker.svg"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="Docker">
+            <img src="./images/stack/K8s.svg"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="K8s">
+            <img src="images/stack/Jenkins.png"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="Jenkins">
+            <img src="images/stack/Postman.png"
+              class="w-full aspect-square p-3 glass-card rounded-2xl hover:scale-110 transition-transform shadow-md"
+              alt="Postman">
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-20 scroll-mt-32">
+        <div class="text-center mb-16 space-y-4 reveal">
+          <h2 class="text-5xl md:text-6xl font-display font-black text-slate-800 dark:text-slate-100">Featured <span
+              class="text-primary">Projects</span>
+          </h2>
+          <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Project 1 -->
+          <div
+            class="glass-card rounded-3xl overflow-hidden reveal group hover:border-primary/50 transition-all duration-500 shadow-xl">
+            <div class="relative h-64 overflow-hidden">
+              <img src="./images/projects/Meeting_Notes.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Ai Meeting Notes">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <span
+                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">01</span>
+              </div>
+            </div>
+            <div class="p-8 space-y-4">
+              <h3 class="text-2xl font-display font-bold">AI Meeting Notes</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-leaf text-primary"></i> Spring Boot
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fab fa-react text-primary"></i> React
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-database text-primary"></i> PostgreSQL
+                </span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
+                Architected an asynchronous meeting intelligence platform using Spring Boot and React, reducing manual
+                note-taking effort by 70% through automated Gemini-powered summarization.
+              </p>
+              <div class="flex items-center gap-4 pt-4">
+                <a href="https://github.com/Arbaz4Sayyad/AI-Meeting-Notes" target="_blank"
+                  class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <button onclick="openVideoModal('meeting-notes-video')"
+                  class="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-xl text-sm font-bold hover:bg-primary/20 transition-all flex items-center gap-2">
+                  <i class="fas fa-play-circle"></i> Demo Video
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="glass-card rounded-3xl overflow-hidden reveal group hover:border-primary/50 transition-all duration-500 shadow-xl">
+            <div class="relative h-64 overflow-hidden">
+              <img src="./images/projects/foodies.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Foodies">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <span
+                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">01</span>
+              </div>
+            </div>
+            <div class="p-8 space-y-4">
+              <h3 class="text-2xl font-display font-bold">Foodies - Online Food Delivery App</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-leaf text-primary"></i> Spring Boot
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fab fa-react text-primary"></i> React
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-database text-primary"></i> MongoDB
+                </span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
+                A robust full-stack food delivery platform integrated with Amazon services and Razorpay for seamless
+                payment processing. Architected with Spring Boot and MongoDB to ensure high availability and efficient
+                data management for 10,000+ potential users.
+              </p>
+              <div class="flex items-center gap-4 pt-4">
+                <a href="https://github.com/Arbaz4Sayyad/FoodiesApp" target="_blank"
+                  class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <button onclick="openVideoModal('foodies-video')"
+                  class="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-xl text-sm font-bold hover:bg-primary/20 transition-all flex items-center gap-2">
+                  <i class="fas fa-play-circle"></i> Demo Video
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div class="skill-container-right">
-            <img src="./images/userAsset/blob vector.png" class="blob-style" alt="" />
-            <img src="./images/stack/Java.svg" alt="" class="skills-logo" />
-            <img src="images/stack/Spring.png" alt="" class="skills-logo">
-            <img src="./images/stack/HTML.png" alt="" class="skills-logo" />
-            <img src="./images/stack/CSS.png" alt="" class="skills-logo" />
-            <img src="./images/stack/Javascript.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Tailwind.png" alt="" class="skills-logo" />
-            <img src="./images/stack/React.png" alt="" class="skills-logo" />
-            <img src="./images/stack/Angular.png" alt="" class="skills-logo" />
-            <img src="./images/stack/NodeJs.svg" alt="" class="skills-logo" />
-            
-            <img src="./images/stack/Github.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Git.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/AWS.png" alt="" class="skills-logo" />
-            
-            <img src="./images/stack/Docker.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/K8s.svg" alt="" class="skills-logo" />
-            <!-- <img src="./images/stack/Cpp.png" alt="" class="skills-logo" />  -->
-            <img src="images/stack/Jenkins.png" alt="" class="skills-logo">
-            <img src="images/stack/Postman.png" alt="" class="skills-logo">
-            <img src="./images/stack/Devops.svg" alt="" class="skills-logo" />
-            <img src="images/stack/Vercel.svg" alt="" class="skills-logo">
+          <!-- Project 3 -->
+          <div
+            class="glass-card rounded-3xl overflow-hidden reveal group hover:border-primary/50 transition-all duration-500 shadow-xl">
+            <div class="relative h-64 overflow-hidden">
+              <img src="./images/projects/eshop.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Ellison Electronics">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <span
+                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">02</span>
+              </div>
+            </div>
+            <div class="p-8 space-y-4">
+              <h3 class="text-2xl font-display font-bold">Ellison Electronics</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fab fa-java text-primary"></i> Java
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-server text-primary"></i> JSP/Servlet
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-database text-primary"></i> MySQL
+                </span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
+                A dynamic e-commerce solution specializing in consumer electronics with personalized AI-driven product
+                recommendations. Leverages a high-performance backend with Java and JDBC to streamline the digital
+                shopping experience and enhance customer engagement.
+              </p>
+              <div class="flex items-center gap-4 pt-4">
+                <a href="https://github.com/Arbaz4Sayyad/EcommerceApp_JDBC_Servlet_JSP" target="_blank"
+                  class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <button onclick="openVideoModal('ellison-video')"
+                  class="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-xl text-sm font-bold hover:bg-primary/20 transition-all flex items-center gap-2">
+                  <i class="fas fa-play-circle"></i> Demo Video
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="glass-card rounded-3xl overflow-hidden reveal group hover:border-primary/50 transition-all duration-500 shadow-xl">
+            <div class="relative h-64 overflow-hidden">
+              <img src="./images/projects/memories.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Memories App">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <span
+                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">03</span>
+              </div>
+            </div>
+            <div class="p-8 space-y-4">
+              <h3 class="text-2xl font-display font-bold">Memories App</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fab fa-react text-primary"></i> React
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fab fa-node-js text-primary"></i> Node.js
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-database text-primary"></i> MongoDB
+                </span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
+                A sophisticated social media ecosystem built on the MERN stack, facilitating real-time experience
+                sharing through a secure JWT-authenticated environment. Features a scalable RESTful API architecture for
+                seamless content delivery across distributed platforms.
+              </p>
+              <div class="flex items-center gap-4 pt-4">
+                <a href="https://github.com/Arbaz4Sayyad/Memories-App" target="_blank"
+                  class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <button onclick="openVideoModal('memories-video')"
+                  class="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-xl text-sm font-bold hover:bg-primary/20 transition-all flex items-center gap-2">
+                  <i class="fas fa-play-circle"></i> Demo Video
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="glass-card rounded-3xl overflow-hidden reveal group hover:border-primary/50 transition-all duration-500 shadow-xl">
+            <div class="relative h-64 overflow-hidden">
+              <img src="./images/projects/claims.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Insurance Claims">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <span
+                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">04</span>
+              </div>
+            </div>
+            <div class="p-8 space-y-4">
+              <h3 class="text-2xl font-display font-bold">Insurance Claims Processing</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fab fa-java text-primary"></i> Java
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-leaf text-primary"></i> Spring Boot
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-code text-primary"></i> JEE
+                </span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
+                An enterprise-grade automation engine designed to streamline insurance eligibility determination through
+                a complex rule-based workflow. Optimizes claim processing efficiency while ensuring strict adherence to
+                regulatory compliance and data integrity standards.
+              </p>
+              <div class="flex items-center gap-4 pt-4">
+                <a href="https://github.com/Arbaz4Sayyad/Insurance-Claims-Processing-System" target="_blank"
+                  class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="glass-card rounded-3xl overflow-hidden reveal group hover:border-primary/50 transition-all duration-500 shadow-xl">
+            <div class="relative h-64 overflow-hidden">
+              <img src="./images/projects/credscore.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Credit Score">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <span
+                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">05</span>
+              </div>
+            </div>
+            <div class="p-8 space-y-4">
+              <h3 class="text-2xl font-display font-bold">Credit Score Analysis Tool</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fab fa-java text-primary"></i> Java
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-leaf text-primary"></i> Spring Boot
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-database text-primary"></i> MySQL
+                </span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
+                A high-security financial tool developed to evaluate consumer credit profiles and generate real-time
+                dynamic risk assessments. Implemented with a focus on scalable architecture and robust authentication
+                protocols to protect sensitive financial data.
+              </p>
+              <div class="flex items-center gap-4 pt-4">
+                <a href="https://github.com/Arbaz4Sayyad/credit-score-analysis-tool" target="_blank"
+                  class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="py-20 scroll-mt-32">
+        <div class="text-center space-y-4 mb-16">
+          <h2 class="text-5xl md:text-6xl font-display font-black text-slate-800 dark:text-slate-100">Professional <span
+              class="text-primary">Experience</span></h2>
+          <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="max-w-4xl mx-auto relative">
+          <!-- Timeline Line -->
+          <div class="timeline-line hidden md:block"></div>
+
+          <div class="timeline-container">
+            <!-- Experience Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-marker hidden md:block">
+                <div class="timeline-marker-pulse"></div>
+              </div>
+              <div
+                class="experience-card glass-card p-8 md:p-10 rounded-[2rem] shadow-xl border border-white/20 dark:border-white/5 flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/4">
+                  <div class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm mb-2">
+                    Apr 2024 — Present
+                  </div>
+                  <div class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest pl-1">
+                    Full-time
+                  </div>
+                </div>
+                <div class="md:w-3/4 space-y-4">
+                  <div>
+                    <h3 class="text-2xl font-display font-bold text-slate-800 dark:text-slate-100">Software Engineer
+                    </h3>
+                    <p class="text-primary font-semibold">AJ Techsoft Pvt. Ltd.</p>
+                  </div>
+                  <ul class="grid gap-3 text-slate-600 dark:text-slate-400">
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                      <span>Designed and developed <strong>RESTful APIs</strong> using Spring Boot for enterprise
+                        applications serving 10,000+ users.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                      <span>Implemented <strong>microservices architecture</strong>, improving system scalability and
+                        reducing deployment time by 40%.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                      <span>Integrated <strong>third-party APIs</strong>, improving user engagement by 20%.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                      <span>Improved <strong>MySQL query performance</strong>, reducing execution time by 40%.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                      <span>Integrated <strong>AWS services</strong> (EC2, S3, IAM) for cloud deployment and secure data
+                        storage.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                      <span>Increased test coverage to 85% using <strong>JUnit</strong>, reducing production bugs.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+                      <span>Collaborated with cross-functional teams in <strong>Agile/Scrum</strong> methodology to
+                        deliver features on schedule.</span>
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-md text-[10px] font-bold text-slate-500">JAVA</span>
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-md text-[10px] font-bold text-slate-500">SPRING
+                      BOOT</span>
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-md text-[10px] font-bold text-slate-500">AWS</span>
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-md text-[10px] font-bold text-slate-500">MYSQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-marker hidden md:block"></div>
+              <div
+                class="experience-card glass-card p-8 md:p-10 rounded-[2rem] shadow-xl border border-white/20 dark:border-white/5 flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/4">
+                  <div
+                    class="inline-block px-4 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm mb-2">
+                    Jan 2024 — Mar 2024
+                  </div>
+                  <div class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest pl-1">
+                    Internship
+                  </div>
+                </div>
+                <div class="md:w-3/4 space-y-4">
+                  <div>
+                    <h3 class="text-2xl font-display font-bold text-slate-800 dark:text-slate-100">Software Development
+                      Intern</h3>
+                    <p class="text-primary font-semibold">AJ Techsoft</p>
+                  </div>
+                  <ul class="grid gap-3 text-slate-600 dark:text-slate-400">
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0"></div>
+                      <span>Developed and maintained <strong>Spring Boot</strong> applications.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0"></div>
+                      <span>Improved front-end UI with <strong>React.js</strong>, boosting user experience by
+                        25%.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0"></div>
+                      <span>Built and consumed <strong>RESTful APIs</strong> for seamless frontend-backend
+                        communication.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0"></div>
+                      <span>Assisted in the development of <strong>RESTful APIs</strong>, enhancing data exchange
+                        efficiency.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0"></div>
+                      <span>Participated in code reviews and followed best practices for clean, maintainable
+                        code.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0"></div>
+                      <span>Gained hands-on experience with <strong>Git version control</strong> and CI/CD
+                        pipelines.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0"></div>
+                      <span>Implemented unit tests using <strong>JUnit</strong>, improving test coverage by 20%.</span>
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-md text-[10px] font-bold text-slate-500">REACT</span>
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-md text-[10px] font-bold text-slate-500">JAVASCRIPT</span>
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-md text-[10px] font-bold text-slate-500">GIT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
 
-        <div class="project-section" id="projects">
-            <h2 class="page-header">Projects</h2>
+      </section>
 
-            <div class="project-container">
-                
+      <!-- Education Section -->
+      <section id="education" class="py-20 reveal scroll-mt-32">
+        <div class="max-w-4xl mx-auto space-y-12">
+          <div class="text-center space-y-4">
+            <h2 class="text-5xl md:text-6xl font-display font-black text-slate-800 dark:text-slate-100">My <span
+                class="text-primary">Education</span></h2>
+            <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
 
-                      <!-- Project 1 -->
-                        <div class="project-card" id="project1">
-                          <div class="project-number project-number-right">01</div>
-                          <div class="project-content project-content-left">
-                            <div class="project-skills-container">
-                              <img class="project-skill" src="./images/stack/Java.svg" alt="" />
-                              <img class="project-skill" src="./images/stack/Spring.png" alt="" />
-                              <img class="project-skill" src="./images/stack/HTML.png" alt="" />
-                              <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                              <img class="project-skill" src="./images/stack/React.png" alt="" />
-                              <img class="project-skill" src="./images/stack/Redux.svg" alt="" />
-                              <img class="project-skill" src="./images/stack/AWS.png" alt="AWS" />
-                              <img class="project-skill" src="./images/stack/MongoDB.svg" alt="MongoDB" />
-                            </div>
+          <div
+            class="glass-card p-10 rounded-3xl group hover:border-primary/30 transition-all flex flex-col md:flex-row gap-8 shadow-lg reveal">
+            <div class="md:w-1/4">
+              <div class="text-primary font-black text-lg italic tracking-widest text-center md:text-left">MCA</div>
+              <div class="text-slate-500 text-sm mt-1 text-center md:text-left">2022 — 2024</div>
+            </div>
+            <div class="md:w-3/4 space-y-4 border-l-2 border-primary/20 pl-8">
+              <h3 class="text-2xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-3">
+                <i class="fas fa-graduation-cap text-primary"></i> Master of Computer Applications
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 text-lg font-medium">
+                Savitribai Phule Pune University
+              </p>
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-lg text-xs font-bold uppercase tracking-wider">
+                Software Engineering & Cloud Computing
+              </div>
+              <ul class="space-y-3 text-slate-600 dark:text-slate-400 pt-4">
+                <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <span>Focused on Data
+                    Structures, Algorithms, Object-Oriented Programming, and Database Management Systems</span></li>
+                <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <span>Studied
+                    fundamentals of Artificial Intelligence and Machine Learning.</span></li>
+                <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <span>Completed major
+                    project on <strong>Insurance Claim Processing System</strong> using Java and Spring Boot</span></li>
+                <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <span>Participated in
+                    coding competitions and technical workshops</span></li>
+              </ul>
+            </div>
+          </div>
 
-                            <h2 class="project-heading">Foodies - Online Food Delivery App</h2>
-                            <p class="project-sub-heading">
-                              <strong>Foodies</strong> is a full-stack food delivery application that enables users to browse restaurants,
-                              add food items to their cart, and place secure online orders. The platform integrates AWS for cloud storage
-                              and Razorpay for seamless payment processing. With a user-friendly interface, real-time order tracking,
-                              and a robust backend built using Spring Boot and MongoDB, Foodies ensures a smooth and efficient food ordering experience.
-                            </p>
+          <div
+            class="glass-card p-10 rounded-3xl group hover:border-primary/30 transition-all flex flex-col md:flex-row gap-8 shadow-lg reveal">
+            <div class="md:w-1/4">
+              <div class="text-primary font-black text-lg italic tracking-widest text-center md:text-left">BCA</div>
+              <div class="text-slate-500 text-sm mt-1 text-center md:text-left">2019 — 2022</div>
+            </div>
+            <div class="md:w-3/4 space-y-4 border-l-2 border-primary/20 pl-8">
+              <h3 class="text-2xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-3">
+                <i class="fas fa-school text-primary"></i> Bachelor of Computer Applications
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 text-lg font-medium">
+                Savitribai Phule Pune University
+              </p>
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-lg text-xs font-bold uppercase tracking-wider">
+                Computer Science & Statistics
+              </div>
+              <ul class="space-y-3 text-slate-600 dark:text-slate-400 pt-4">
+                <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <span>Studied
+                    Fundamentals of Computer languages, and Statistics with a focus on analytical problem-solving</span>
+                </li>
+                <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <span>Developed a
+                    strong foundation in logical reasoning and scientific thinking</span></li>
+                <li class="flex items-start gap-3"><i class="fas fa-check text-primary mt-1"></i> <span>Completed
+                    project on <strong>Ecommerce Platform</strong> using Java, JDBC and Servlet</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                            <div class="btn-group">
-                              <button class="btn-pink btn-project">
-                                <a href="https://github.com/Arbaz4Sayyad/FoodiesApp/blob/main/README.md" target="_blank">GitHub</a>
-                              </button>
-                              <button class="btn-pink btn-project" onclick="openVideoModal('foodies-video')">Demo Video</button>
-                            </div>
+      <!-- Research Papers -->
+      <section id="research" class="py-20">
+        <div class="text-center space-y-4 mb-16">
+          <h2 class="text-5xl md:text-6xl font-display font-black text-slate-800 dark:text-slate-100">Research <span
+              class="text-primary">Publications</span></h2>
+          <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="glass-card p-8 rounded-3xl reveal shadow-lg h-full flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="text-primary text-3xl opacity-20"><i class="fas fa-search"></i></div>
+              <h3 class="text-2xl font-bold">A Study on Awareness About Cybercrime Among Students</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed text-justify">
+                This research evaluates college students' awareness of cybercrime, identifying knowledge gaps and
+                vulnerabilities.
+                The study, based on data from 50 students in <strong>Narhe, Pune</strong>, highlights the need for
+                enhanced
+                online safety practices and better crime reporting mechanisms. The findings emphasize the importance
+                of cybersecurity education and legal measures to mitigate cyber threats.
+              </p>
+              <p class="text-slate-500 dark:text-slate-500 text-xs italic">
+                <strong>Keywords:</strong> Cybercrime, Cybersecurity, IT Superpower, IT Act, Awareness
+              </p>
+            </div>
+            <a href="https://www.ijnrd.org/papers/IJNRD2310240.pdf" target="_blank"
+              class="mt-8 text-primary font-bold flex items-center gap-2 hover:translate-x-1 transition-transform">Read
+              Full Paper <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="glass-card p-8 rounded-3xl reveal shadow-lg h-full flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="text-primary text-3xl opacity-20"><i class="fas fa-shopping-cart"></i></div>
+              <h3 class="text-2xl font-bold">A Study Towards Customer Perception on E-Commerce</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed text-justify">
+                This paper explores consumer preferences for online vs. offline shopping in <strong>Narhe-Pune</strong>.
+                The study, published in the <strong>International Journal of Novel Research and Development</strong>,
+                analyzes data from 40 respondents, highlighting satisfaction with e-commerce due to economic benefits
+                and convenience.
+                However, concerns around return policies and product quality remain. The research suggests improvements
+                in
+                security, return processes, and quality assurance to enhance the online shopping experience.
+              </p>
+              <p class="text-slate-500 dark:text-slate-500 text-xs italic">
+                <strong>Keywords:</strong> E-commerce, Consumer Behavior, Online Shopping, Digital Marketplace
+              </p>
+            </div>
+            <a href="https://www.ijnrd.org/papers/IJNRD2310269.pdf" target="_blank"
+              class="mt-8 text-primary font-bold flex items-center gap-2 hover:translate-x-1 transition-transform">Read
+              Full Paper <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
 
-                            <!-- Modal for the first project -->
-                              <div class="video-modal" id="foodies-video">
-                                <div class="video-modal-content">
-                                  <span class="close-btn" onclick="closeVideoModal('foodies-video')">&times;</span>
-                                  <iframe src="https://drive.google.com/file/d/1MKTG0K-Msn98wtnfRDeN2f40fF8ryWcW/preview" width="100%" height="400" allow="autoplay"></iframe>
-                                </div>
-                              </div>
-                          </div>
-                        </div>
-                    
-                    <!-- Project 2 -->
-                    <div class="project-card" id="project2">
-                      <div class="project-number project-number-leftt">02</div>
-                      <div class="project-content project-content-right">
-                        <div class="project-skills-container">
-                          <img class="project-skill" src="./images/stack/Java.svg" alt="" />
-                          <img class="project-skill" src="./images/stack/HTML.png" alt="" />
-                          <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                          <img class="project-skill" src="./images/stack/Javascript.svg" alt="" />
-                          <img class="project-skill" src="./images/stack/Bootstrap.svg" alt="" />
-                          <img class="project-skill" src="./images/stack/AWS.png" alt="AWS" />
-                        </div>
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 relative scroll-mt-32">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
 
-                        <h2 class="project-heading">Ellison Electronics</h2>
-                        <p class="project-sub-heading">
-                          <strong>Ellison Electronics</strong> is a dynamic e-commerce platform specializing in the latest technology and gadgets.
-                          It offers an extensive catalog of electronic products with features such as AI-powered recommendations, secure payments,
-                          and seamless order tracking. Designed for scalability, the platform ensures a high-performance user experience.
-                        </p>
+          <div class="text-center space-y-4 mb-16 reveal">
+            <h2 class="text-5xl font-display font-black text-slate-800 dark:text-slate-100">Contact <span
+                class="text-primary">Me</span></h2>
+            <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
 
-                        <div class="btn-group">
-                          <button class="btn-pink btn-project"><a href="https://github.com/Arbaz4Sayyad/EcommerceApp_JDBC_Servlet_JSP/blob/main/README.md" target="_blank">GitHub</a></button>
-                          <button class="btn-pink btn-project" onclick="openVideoModal('ellison-video')">Demo Video</button>
-                        </div>
+          <div class="grid lg:grid-cols-5 gap-16 reveal">
+            <!-- Contact Info Sidebar -->
+            <div class="lg:col-span-2 space-y-10">
+              <div class="space-y-6">
+                <h3 class="text-3xl font-display font-bold text-slate-800 dark:text-slate-100 italic">Let's build
+                  something <span class="text-primary">extraordinary</span> together.</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                  I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                  vision. Feel free to reach out!
+                </p>
+              </div>
 
-                        <div class="video-modal" id="ellison-video">
-                          <div class="video-modal-content">
-                            <span class="close-btn" onclick="closeVideoModal('ellison-video')">&times;</span>
-                            <iframe src="https://drive.google.com/file/d/1NgrKjzRKydkXtfPCIZwWRFL659pOpHXa/preview" width="100%" height="400" allow="autoplay"></iframe>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-  
-                <!-- Project 3 -->
-                    <div class="project-card" id="project3">
-                      <div class="project-number project-number-right">03</div>
-                      <div class="project-content project-content-left">
-                        <div class="project-skills-container">
-
-                          <img class="project-skill" src="./images/stack/React.png" alt="React" />
-                          <img class="project-skill" src="./images/stack/NodeJs.svg" alt="Node.js" />
-                          <img class="project-skill" src="./images/stack/Express.png" alt="Express" />
-                          <img class="project-skill" src="./images/stack/MongoDB.svg" alt="MongoDB" />
-                          <img class="project-skill" src="./images/stack/Javascript.svg" alt="JavaScript" />
-                          <img class="project-skill" src="./images/stack/HTML.png" alt="HTML" />
-                          <img class="project-skill" src="./images/stack/CSS.png" alt="CSS" />
-                        </div>
-
-                        <h2 class="project-heading">Memories App</h2>
-                        <p class="project-sub-heading">
-                          <strong>Memories App</strong> is a MERN stack social media application where users can create, edit, like, and delete memory posts. Built with a focus on CRUD operations, JWT authentication, and RESTful API design, it provides a sleek UI and real-time feedback for enhanced user interaction.
-                        </p>
-
-                        <div class="btn-group">
-                          <button class="btn-pink btn-project">
-                            <a href="https://github.com/Arbaz4Sayyad/Memories-App" target="_blank">GitHub</a>
-                          </button>
-                          <button class="btn-pink btn-project" onclick="openVideoModal('memories-video')">Demo Video</button>
-                        </div>
-
-                        <div class="video-modal" id="memories-video">
-                          <div class="video-modal-content">
-                            <span class="close-btn" onclick="closeVideoModal('memories-video')">&times;</span>
-                            <iframe src="https://drive.google.com/file/d/1NaR0m4uLxJ579O_WMY4MTAEd8vHl5R6y/preview" width="100%" height="400" allow="autoplay"></iframe>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                <div class="project-card" id="project4">
-                  <div class="project-number project-number-left">04</div>
-                  <div class="project-content project-content-right">
-                    <div class="project-skill-container">
-                      <img class="project-skill" src="./images/stack/Java.svg" alt="" />
-                      <img class="project-skill" src="./images/stack/Spring.png" alt="" />
-                      <img class="project-skill" src="./images/stack/HTML.png" alt="" />
-                      <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                      <img class="project-skill" src="./images/stack/Angular.png" alt="" />
-                      <img class="project-skill" src="./images/stack/Bootstrap.svg" alt="" />
-                      
-                    </div>
-                    <h2 class="project-heading">Insurance Claims Processing Eligibility System</h2> 
-                        <p class="project-sub-heading">
-                            The <strong>Insurance Claim Proceesing System</strong> is a comprehensive platform designed to streamline the assessment and approval process 
-                            for various health and insurance plans. It automates eligibility determination based on predefined rules, 
-                            ensuring accuracy and efficiency in processing applications. The system features seamless data integration, 
-                            case management, and real-time tracking to enhance user experience and operational effectiveness.
-                        </p>  
-                    <div class="btn-group">
-                      <button class="btn-pink btn-project"><a href="https://github.com/Arbaz4Sayyad/Insurance-Claims-Processing-System" target="_blank">GitHub</button></a>
-                    </div>
+              <div class="space-y-8">
+                <div class="flex items-start gap-6 group">
+                  <div
+                    class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-lg">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="space-y-1">
+                    <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest opacity-50">
+                      Email</h4>
+                    <a href="mailto:arbaz4sayyad@gmail.com"
+                      class="text-slate-700 dark:text-slate-300 font-medium hover:text-primary transition-colors">arbaz4sayyad@gmail.com</a>
                   </div>
                 </div>
 
-              <!-- Project 5 -->
-                    <div class="project-card" id="project5">
-                      <div class="project-number project-number-right">05</div>
-                      <div class="project-content project-content-left">
-                        <div class="project-skills-container">
-                          <img class="project-skill" src="./images/stack/Java.svg" alt="" />
-                          <img class="project-skill" src="./images/stack/Spring.png" alt="" />
-                          <img class="project-skill" src="./images/stack/HTML.png" alt="" />
-                          <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                          <img class="project-skill" src="./images/stack/Angular.png" alt="" />
-                        </div>
-
-                        <h2 class="project-heading">Credit Score Analysis Tool</h2>
-                        <p class="project-sub-heading">
-                          The <strong>Credit Score Analysis Tool</strong> is a microservices-based platform that evaluates user credit profiles to generate dynamic credit scores. 
-                          It leverages real-time data processing and rule-based analysis to assess creditworthiness with precision. 
-                          The system incorporates secure authentication, scalable architecture, and insightful dashboards for enhanced decision-making and user experience.
-                        </p>
-
-                        <div class="btn-group">
-                          <button class="btn-pink btn-project">
-                            <a href="https://github.com/Arbaz4Sayyad/credit-score-analysis-tool" target="_blank">GitHub</a>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
-            </div>
-
-        </div>
-        
-  
-        <div class="experience-section" id="experience">
-          <h2 class="page-header">Work Experience</h2>
-       
-          <div class="experience-container">
-       
-            <div class="experience-card">
-              <h3 class="experience-title">🚀 Software Engineer - <span>AJ Techsoft Pvt. Ltd.</span></h3>
-              <p class="experience-duration"><i class="fa-solid fa-calendar"></i> Apr 2024 - Present</p>
-              <ul class="experience-description">
-                  <li><i class="fa-solid fa-code"></i> Developed scalable Java applications using <strong>Spring Boot</strong>, <strong>Hibernate</strong>, <strong>React</strong>, and <strong>Angular</strong>.</li>
-                  <li><i class="fa-solid fa-network-wired"></i> Designed and optimized <strong>RESTful APIs</strong>, reducing data latency by <strong>25%</strong>.</li>
-                  <li><i class="fa-solid fa-database"></i> Improved MySQL query performance, reducing execution time by <strong>40%</strong>.</li>
-                  <li><i class="fa-solid fa-bug"></i> Increased test coverage to <strong>85%</strong> using <strong>JUnit</strong>, reducing production bugs.</li>
-                  <li><i class="fa-solid fa-plug"></i> Integrated third-party APIs, improving user engagement by <strong>20%</strong>.</li>
-                  <li><i class="fa-solid fa-users"></i> Led Agile sprint planning, achieving <strong>90%</strong> task completion.</li>
-              </ul>
-            </div>
-          
-            <div class="experience-card">
-              <h3 class="experience-title">💻 Software Development Intern - <span>AJ Techsoft Pvt. Ltd.</span></h3>
-              <p class="experience-duration"><i class="fa-solid fa-calendar"></i> Jan 2023 - Mar 2024</p>
-              <ul class="experience-description">
-                  <li><i class="fa-solid fa-code-branch"></i> Developed and maintained <strong>Spring Boot</strong> applications.</li>
-                  <li><i class="fa-solid fa-desktop"></i> Improved front-end UI with <strong>React.js</strong>, boosting user experience by <strong>25%</strong>.</li>
-                  <li><i class="fa-solid fa-bug"></i> Conducted code reviews and debugging, reducing system errors by <strong>20%</strong>.</li>
-                  <li><i class="fa-solid fa-shield"></i>Assisted in the development of <strong>RESTful APIs</strong>, enhancing data exchange efficiency.</li>
-                  <li><i class="fa-solid fa-users"></i>Collaborated with senior developers to debug and optimize <strong>Spring Boot</strong> applications.</li>
-                  <li><i class="fa-solid fa-code"></i>Implemented <strong>unit tests</strong> using JUnit, improving test coverage by <strong>20%</strong>.</li>
-              </ul>
-            </div>
-       
-          </div>
-       </div>
-
-       <!-- <div class="experience-section" id="experience">
-        <h2 class="page-header">Work Experience</h2>
-    
-        <div class="experience-container">
-    
-            
-            <div class="experience-card">
-                <h3 class="experience-title">🚀 Software Engineer - <span>AJ Techsoft, Pune</span></h3>
-                <p class="experience-duration"><i class="fa-solid fa-calendar"></i> Mar 2024 - Present</p>
-                <ul class="experience-description">
-                    <li><i class="fa-solid fa-code"></i> Developed and maintained <strong>ClaimSwift - Insurance Eligibility System</strong>, a scalable platform using <strong>Spring Boot, Microservices, Apache Kafka, and Angular</strong>.</li>
-                    <li><i class="fa-solid fa-network-wired"></i> Implemented <strong>asynchronous messaging</strong> with <strong>Apache Kafka</strong>, improving system efficiency by <strong>40%</strong>.</li>
-                    <li><i class="fa-solid fa-server"></i> Designed <strong>CI/CD pipelines</strong> with <strong>Jenkins, Docker, and Kubernetes</strong>, reducing deployment time by <strong>50%</strong>.</li>
-                    <li><i class="fa-solid fa-shield"></i> Addressed <strong>technology integration & security challenges</strong>, ensuring compliance and optimized system performance.</li>
-                </ul>
-            </div>
-    
-
-            <div class="experience-card">
-                <h3 class="experience-title">💻 Software Development Intern - <span>AJ Techsoft, Pune</span></h3>
-                <p class="experience-duration"><i class="fa-solid fa-calendar"></i> Dec 2023 - Feb 2024</p>
-                <ul class="experience-description">
-                    <li><i class="fa-solid fa-code-branch"></i> Contributed to the development of <strong>TechGadget Hub</strong>, an <strong>e-commerce platform</strong> using <strong>Spring Boot, React, and MySQL</strong>.</li>
-                    <li><i class="fa-solid fa-desktop"></i> Designed & optimized the <strong>UI with React and Bootstrap</strong>, improving engagement by <strong>25%</strong>.</li>
-                    <li><i class="fa-solid fa-credit-card"></i> Implemented <strong>secure payment gateways</strong> & automated email notifications, increasing customer retention by <strong>20%</strong>.</li>
-                    <li><i class="fa-solid fa-database"></i> Optimized <strong>database performance</strong> using indexing and query optimization, improving response time by <strong>30%</strong>.</li>
-                </ul>
-            </div>
-    
-        </div>
-    </div> -->
-       
-
-        <div class="research-paper-section" id="research">
-          <h2 class="page-header">📄 Research Papers Published</h2>
-          <div class="research-paper-container">
-            <!-- Research Paper 1 -->
-                <div class="research-paper-card">
-                  <h3 class="research-paper-title">🔍 A Study on Awareness About Cybercrime Among Students</h3>
-                  <p class="research-paper-description">
-                      This research, published in the <strong>International Journal of Novel Research and Development</strong>, 
-                      evaluates college students' awareness of cybercrime, identifying knowledge gaps and vulnerabilities. 
-                      The study, based on data from 50 students in <strong>Narhe, Pune</strong>, highlights the need for enhanced 
-                      online safety practices and better crime reporting mechanisms. The findings emphasize the importance 
-                      of cybersecurity education and legal measures to mitigate cyber threats.
-                  </p>
-                  <p class="research-paper-keywords"><strong>Keywords:</strong> Cybercrime, Cybersecurity, IT Superpower, IT Act, Awareness</p>
-                  <a href="https://www.ijnrd.org/papers/IJNRD2310240.pdf" class="btn-pink" target="_blank">📖 Read Paper</a>
-              </div>
-            <!-- Research Paper 2 -->
-                <div class="research-paper-card">
-                  <h3 class="research-paper-title">🛒 A Study Towards Customer Perception on E-Commerce</h3>
-                  <p class="research-paper-description">
-                      This paper explores consumer preferences for online vs. offline shopping in <strong>Narhe-Pune</strong>. 
-                      The study, published in the <strong>International Journal of Novel Research and Development</strong>, 
-                      analyzes data from 40 respondents, highlighting satisfaction with e-commerce due to economic benefits and convenience. 
-                      However, concerns around return policies and product quality remain. The research suggests improvements in 
-                      security, return processes, and quality assurance to enhance the online shopping experience.
-                  </p>
-                  <p class="research-paper-keywords"><strong>Keywords:</strong> E-commerce, Consumer Behavior, Online Shopping, Digital Marketplace</p>
-                  <a href="https://www.ijnrd.org/papers/IJNRD2310269.pdf" class="btn-pink" target="_blank">📖 Read Paper</a>
-              </div>
-          </div>
-        </div>
-
-        <div class="contactus-form-container" id="contactme">
-          <div class="container">
-
-            <h1 class="contactus-heading">Contact Me</h1>
-
-            <h3 class="contactus-sub-heading">Questions, thoughts, or just want to say hello?</h3>
-
-            <div class="contactus-form-container">
-              <form class="form" action="https://api.web3forms.com/submit" method="POST">
-                <div class="formfield-container">
-                  <input class= "formfield" 
-                  type="text" 
-                  name="name" 
-                  id="" 
-                  placeholder="Enter your name">
-
-                  <input class= "formfield" 
-                  type="email" 
-                  name="email" 
-                  id="" 
-                  placeholder="Enter your email address">
-
-                  <input class= "formfield" 
-                  type="text" 
-                  name="subject" 
-                  id="" 
-                  placeholder="Enter your subject">
-
-                  <textarea name="message" 
-                  id="" 
-                  cols="30" 
-                  rows="10"
-                  class="formfield formfield-textarea"
-                  placeholder="Enter your message"></textarea>
-
+                <div class="flex items-start gap-6 group">
+                  <div
+                    class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-lg">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                  <div class="space-y-1">
+                    <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest opacity-50">
+                      LinkedIn</h4>
+                    <a href="https://linkedin.com/in/arbaz-sayyad" target="_blank"
+                      class="text-slate-700 dark:text-slate-300 font-medium italic underline decoration-primary/30 underline-offset-4 hover:text-primary transition-colors">linkedin.com/in/arbaz-sayyad</a>
+                  </div>
                 </div>
+
+                <div class="flex items-start gap-6 group">
+                  <div
+                    class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-lg">
+                    <i class="fab fa-github"></i>
+                  </div>
+                  <div class="space-y-1">
+                    <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest opacity-50">
+                      GitHub</h4>
+                    <a href="https://github.com/Arbaz4Sayyad" target="_blank"
+                      class="text-slate-700 dark:text-slate-300 font-medium italic underline decoration-primary/30 underline-offset-4 hover:text-primary transition-colors">github.com/Arbaz4Sayyad</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-6 group">
+                  <div
+                    class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-lg">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="space-y-1">
+                    <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest opacity-50">
+                      Location</h4>
+                    <p class="text-slate-700 dark:text-slate-300 font-medium">Pune, Maharashtra, India</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="lg:col-span-3 glass-card p-10 md:p-12 rounded-[2.5rem] shadow-2xl relative">
+              <form action="https://api.web3forms.com/submit" method="POST" class="space-y-8">
                 <input type="hidden" name="access_key" value="65312628-0052-4a76-8938-ae4ce606bd60">
-                <div>
-                  <button type="submit" class="btn-pink" id="submit-btn">
-                    Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
-                  </button>
+                <div class="grid md:grid-cols-2 gap-8">
+                  <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Name</label>
+                    <input type="text" name="name" placeholder="Enter your name"
+                      class="w-full px-6 py-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
+                      required>
+                  </div>
+                  <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Email</label>
+                    <input type="email" name="email" placeholder="Enter your email"
+                      class="w-full px-6 py-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
+                      required>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Subject</label>
+                  <input type="text" name="subject" placeholder="Enter subject"
+                    class="w-full px-6 py-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
+                    required>
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Message</label>
+                  <textarea name="message" rows="5" placeholder="Enter your message"
+                    class="w-full px-6 py-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
+                    required></textarea>
                 </div>
 
+                <button type="submit"
+                  class="w-full py-5 bg-primary text-white font-black rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.01] active:scale-95 transition-all text-lg flex items-center justify-center gap-3 group">
+                  Send Message
+                  <i
+                    class="fas fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                </button>
               </form>
             </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <footer>
-          <div class="container">
-            <div class="footer-wrapper">
-              <div class="footer-faded-text">Arbaz Sayyad</div>
+    <!-- Footer -->
+    <footer
+      class="mt-20 py-12 border-t border-slate-200 dark:border-slate-800 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-2xl font-display font-extrabold tracking-tight opacity-50">Arbaz Sayyad</div>
 
-              <div class="link-wrapper">
-                <div>
-                  <a href="#home">Home
-                  </a>
-                </div>
+        <div
+          class="flex flex-wrap justify-center gap-8 text-slate-500 hover:text-slate-900 transition-colors font-medium">
+          <a href="#home" class="hover:text-primary">Home</a>
+          <a href="#skills" class="hover:text-primary">Skills</a>
+          <a href="#projects" class="hover:text-primary">Projects</a>
+          <a href="#experience" class="hover:text-primary">Experience</a>
+          <a href="#education" class="hover:text-primary">Education</a>
+          <a href="#research" class="hover:text-primary">Publications</a>
+        </div>
 
-                <div>
-                  <a href="#skills">Skills</a>
-                </div>
-                
-                <div>
-                  <a href="#projects">Projects</a>
-                </div>
+        <div class="flex gap-6 text-xl text-slate-500">
+          <a href="https://www.linkedin.com/in/arbaz-sayyad/" target="_blank"
+            class="hover:text-primary transition-colors"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Arbaz4Sayyad" target="_blank" class="hover:text-primary transition-colors"><i
+              class="fab fa-github"></i></a>
+          <a href="mailto:arbaz4sayyad@gmail.com" class="hover:text-primary transition-colors"><i
+              class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="text-center mt-12 text-slate-400 text-sm">
+        &copy; 2026 Arbaz Sayyad. Built with Passion & Modern Tech.
+      </div>
+    </footer>
 
-                <div>
-                  <a href="#experience">Experience</a>
-                </div>
-                
-                <div>
-                  <a href="#research">Publications</a>
-                </div>
-
-                <div>
-                  <a aria-label="Open Arbaz's resume in a new tab" href="https://arbaz4sayyad.github.io/my-resume/sde-backend.pdf" target="_blank"
-                    class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i>Resume</a> 
-                </div> 
-
-                <div>
-                  <a href="#contactme">Contact Me</a>
-                </div>
-              </div>
-
-              <div class="icon-wrapper">
-                <a href="https://www.linkedin.com/in/arbaz-sayyad/" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a>
-                <a href="https://github.com/Arbaz4Sayyad" target="_blank"><i class="fa-brands fa-github icon"></i></a>
-                <i class="fa-brands fa-twitter icon"></i>
-                <i class="fa-brands fa-instagram icon"></i>
-                <a href="mailto:arbaz4sayyad@gmail.com?subject=Hiring Inquiry&body=Hi Arbaz, I would like to discuss a potential job opportunity with you." target="_blank"><i class="fa-regular fa-envelope icon"></i></a>
-                
-
-                <!-- <p><i class="fa fa-phone"></i> +91 9834239709</p>
-                <p><i class="fa fa-envelope"></i> arbaz4sayyad@gmail.com</p>
-                <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/arbaz-sayyad/" target="_blank">linkedin.com/in/arbaz-sayyad</a></p>
-                <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Arbaz4Sayyad" target="_blank">github.com/Arbaz4Sayyad</a></p> -->
-               
-              </div>
-
-               
-              
-            </div>
-          </div>
-        </footer>
+    <!-- Video Modals -->
+    <div class="video-modal" id="meeting-notes-video">
+      <div class="relative w-full max-w-4xl p-4">
+        <button onclick="closeVideoModal('meeting-notes-video')"
+          class="absolute -top-12 right-0 text-white text-3xl">&times;</button>
+        <iframe src="https://drive.google.com/file/d/1FHvGXISMotO7OLaQqvoh8OhpSmw_mzg7/preview" width="100%"
+          height="450" class="rounded-2xl" allow="autoplay"></iframe>
+      </div>
     </div>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
-  <script>
-    var typeData = new Typed(".role", {
-      strings: [
-        "Software Developer",
-        "Java Full Stack Developer",
-        "Web Developer",
-        "Backend Developer",
-      ],
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 80,
-      backDelay: 1000,
-    });
+    <div class="video-modal" id="foodies-video">
+      <div class="relative w-full max-w-4xl p-4">
+        <button onclick="closeVideoModal('foodies-video')"
+          class="absolute -top-12 right-0 text-white text-3xl">&times;</button>
+        <iframe src="https://drive.google.com/file/d/1MKTG0K-Msn98wtnfRDeN2f40fF8ryWcW/preview" width="100%"
+          height="450" class="rounded-2xl" allow="autoplay"></iframe>
+      </div>
+    </div>
+    <div class="video-modal" id="ellison-video">
+      <div class="relative w-full max-w-4xl p-4">
+        <button onclick="closeVideoModal('ellison-video')"
+          class="absolute -top-12 right-0 text-white text-3xl">&times;</button>
+        <iframe src="https://drive.google.com/file/d/1NgrKjzRKydkXtfPCIZwWRFL659pOpHXa/preview" width="100%"
+          height="450" class="rounded-2xl" allow="autoplay"></iframe>
+      </div>
+    </div>
+    <div class="video-modal" id="memories-video">
+      <div class="relative w-full max-w-4xl p-4">
+        <button onclick="closeVideoModal('memories-video')"
+          class="absolute -top-12 right-0 text-white text-3xl">&times;</button>
+        <iframe src="https://drive.google.com/file/d/1NaR0m4uLxJ579O_WMY4MTAEd8vHl5R6y/preview" width="100%"
+          height="450" class="rounded-2xl" allow="autoplay"></iframe>
+      </div>
+    </div>
+  </div>
 
+  <!-- Mobile Menu Drawer -->
+  <div id="mobileDrawer"
+    class="fixed inset-0 bg-slate-50 dark:bg-slate-950 z-[100] translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col items-center justify-center gap-10">
+    <button id="closeMobileMenu"
+      class="absolute top-8 right-8 text-4xl text-slate-800 dark:text-white hover:text-primary transition-colors">
+      <i class="fas fa-times"></i>
+    </button>
+    <div
+      class="flex flex-col items-center gap-6 text-2xl font-display font-bold text-slate-800 dark:text-white text-center">
+      <a href="#home" class="mobile-link hover:text-primary transition-colors">Home</a>
+      <a href="#skills" class="mobile-link hover:text-primary transition-colors">Skills</a>
+      <a href="#projects" class="mobile-link hover:text-primary transition-colors">Projects</a>
+      <a href="#experience" class="mobile-link hover:text-primary transition-colors">Experience</a>
+      <a href="#education" class="mobile-link hover:text-primary transition-colors">Education</a>
+      <a href="#research" class="mobile-link hover:text-primary transition-colors">Publications</a>
+      <a href="https://arbaz4sayyad.github.io/my-resume/sde-backend.pdf" target="_blank"
+        class="mobile-link text-primary mt-2">Resume</a>
+      <a href="#contactme" class="bg-primary text-white px-8 py-3 rounded-2xl shadow-xl shadow-primary/20 mt-4">Hire
+        Me</a>
 
+      <button id="mobileThemeToggle"
+        class="w-14 h-14 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 transition-colors mt-6 border border-slate-200 dark:border-slate-700">
+        <i class="fas fa-moon dark:hidden text-xl"></i>
+        <i class="fas fa-sun hidden dark:inline text-xl text-yellow-500"></i>
+      </button>
+    </div>
+  </div>
 
-    function openVideoModal(id) {
-    document.getElementById(id).style.display = 'flex';
-  }
+  <button id="backToTop"
+    class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible translate-y-10 transition-all duration-300 hover:scale-110 active:scale-95 z-[100] shadow-primary/20">
+    <i class="fas fa-arrow-up text-xl"></i>
+  </button>
 
-  function closeVideoModal(id) {
-    const modal = document.getElementById(id);
-    const iframe = modal.querySelector("iframe");
-    modal.style.display = 'none';
-    iframe.src = iframe.src; // reset video on close
-  }
-  </script> -->
-
-  <!-- Font Awesome & Typed.js (loaded with defer for performance) -->
-<script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script defer src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Typed.js typewriter animation
-    new Typed(".role", {
-      strings: [
-        "Software Developer",
-        "Java Full Stack Developer",
-        "Web Developer",
-        "Backend Developer",
-      ],
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 80,
-      backDelay: 1000,
-    });
-
-    // Video modal: open
-    window.openVideoModal = function (id) {
-      const modal = document.getElementById(id);
-      if (modal) {
-        modal.style.display = 'flex';
-      }
-    };
-
-    // Video modal: close and reset video
-    window.closeVideoModal = function (id) {
-      const modal = document.getElementById(id);
-      if (modal) {
-        const iframe = modal.querySelector("iframe");
-        modal.style.display = 'none';
-        if (iframe) iframe.src = iframe.src;
-      }
-    };
-
-    // Scroll behavior for navbar (sticky + vertical on scroll)
-    window.addEventListener("scroll", function () {
-      const navbar = document.querySelector(".navbar");
-      if (window.scrollY > 100) {
-        navbar.classList.add("fixed-vertical");
-      } else {
-        navbar.classList.remove("fixed-vertical");
-      }
-    });
-  });
-</script>
-
+  <script src="scripts.js"></script>
 </body>
+
 </html>
