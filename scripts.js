@@ -116,13 +116,23 @@ document.addEventListener("DOMContentLoaded", () => {
       if (iframe) iframe.src = iframe.src;
     };
 
-    // CLOSE MODAL ON CLICK OUTSIDE
     document.querySelectorAll('.video-modal').forEach(modal => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeVideoModal(modal.id);
             }
         });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.video-modal').forEach(modal => {
+                if (modal.style.display === 'flex') {
+                    closeVideoModal(modal.id);
+                }
+            });
+        }
     });
 
     // 6. Floating Animation for Decorations
