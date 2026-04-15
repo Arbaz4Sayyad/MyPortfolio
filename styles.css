@@ -238,3 +238,85 @@ section {
     height: 1.25rem;
   }
 }
+
+/* ================================
+   Open Source Section Styles
+   ================================ */
+
+/* Contribution type badges */
+.os-type-badge {
+  border: 1px solid;
+}
+
+.os-type-feature {
+  background: rgba(13, 148, 136, 0.12);
+  color: #0d9488;
+  border-color: rgba(13, 148, 136, 0.3);
+}
+
+.dark .os-type-feature {
+  background: rgba(13, 148, 136, 0.18);
+  color: #2dd4bf;
+  border-color: rgba(45, 212, 191, 0.3);
+}
+
+.os-type-bugfix {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.dark .os-type-bugfix {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.os-type-docs {
+  background: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+.dark .os-type-docs {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border-color: rgba(165, 180, 252, 0.3);
+}
+
+/* OS card lift on hover */
+.os-card {
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.os-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px -12px rgba(13, 148, 136, 0.2);
+}
+
+/* Stats bar subtle shimmer glow */
+.os-stats-bar {
+  position: relative;
+  overflow: hidden;
+}
+
+.os-stats-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(13, 148, 136, 0.06) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-bar 4s ease-in-out infinite;
+}
+
+@keyframes shimmer-bar {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}

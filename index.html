@@ -61,23 +61,27 @@
           </div>
         </a>
 
-        <div class="hidden md:flex items-center gap-8 font-medium text-slate-600 dark:text-slate-300">
-          <a href="#about" class="hover:text-primary transition-colors">About Me</a>
+        <div class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-600 dark:text-slate-300">
+          <a href="#about" class="hover:text-primary transition-colors">About</a>
           <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
           <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+          <a href="#opensource" class="hover:text-primary transition-colors whitespace-nowrap">Open Source</a>
           <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
           <a href="#education" class="hover:text-primary transition-colors">Education</a>
-          <a href="#research" class="hover:text-primary transition-colors">Publications</a>
+          <a href="#research" class="hover:text-primary transition-colors"> Publications</a>
+
           <a href="https://arbaz4sayyad.github.io/my-resume/sde-backend.pdf" target="_blank"
-            class="flex items-center gap-2 hover:text-primary transition-colors"><i class="fas fa-file-pdf"></i>
-            Resume</a>
+            class="hover:text-primary transition-colors">
+            <i class="fas fa-file-pdf w-4 text-primary/60"></i> Resume
+          </a>
+
           <a href="#contact"
-            class="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-md">Hire
+            class="bg-primary hover:bg-teal-700 text-white px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-md text-sm whitespace-nowrap">Hire
             Me</a>
           <button id="themeToggle"
-            class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-200">
-            <i class="fas fa-moon dark:hidden text-lg"></i>
-            <i class="fas fa-sun hidden dark:inline text-lg text-yellow-500"></i>
+            class="w-9 h-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-200 shrink-0">
+            <i class="fas fa-moon dark:hidden text-sm"></i>
+            <i class="fas fa-sun hidden dark:inline text-sm text-yellow-500"></i>
           </button>
         </div>
         <button class="md:hidden text-2xl text-slate-800 dark:text-white" id="mobileMenuBtn">
@@ -248,7 +252,7 @@
               <div
                 class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:-translate-y-1">
                 <i class="fas fa-briefcase text-primary"></i>
-                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Software Engineer</span>
+                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Software Engineer - Backend</span>
               </div>
               <div
                 class="highlight-item flex items-center gap-3 px-5 py-3 glass-card rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:-translate-y-1">
@@ -436,7 +440,10 @@
                 </span>
               </div>
               <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
-                Developed a high-performance meeting intelligence platform that automates transcription and summarization using Google Gemini AI. The system features asynchronous processing with Spring Boot and a dynamic React dashboard, enabling teams to capture actionable insights and reduce manual documentation effort by over 70% while ensuring secure data storage.
+                Developed a high-performance meeting intelligence platform that automates transcription and
+                summarization using Google Gemini AI. The system features asynchronous processing with Spring Boot and a
+                dynamic React dashboard, enabling teams to capture actionable insights and reduce manual documentation
+                effort by over 70% while ensuring secure data storage.
               </p>
               <div class="flex items-center gap-4 pt-4">
                 <a href="https://github.com/Arbaz4Sayyad/AI-Meeting-Notes" target="_blank"
@@ -479,7 +486,10 @@
                 </span>
               </div>
               <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
-                Engineered a premium URL shortening service with advanced analytics and a sleek "Midnight" design system. Built with Spring Boot and React, it offers custom short links, real-time click tracking, and geographic data visualization, providing users with a fast, secure, and highly scalable solution for managing their digital footprints.
+                Engineered a premium URL shortening service with advanced analytics and a sleek "Midnight" design
+                system. Built with Spring Boot and React, it offers custom short links, real-time click tracking, and
+                geographic data visualization, providing users with a fast, secure, and highly scalable solution for
+                managing their digital footprints.
               </p>
               <div class="flex items-center gap-4 pt-4">
                 <a href="https://github.com/Arbaz4Sayyad/linkmagic-url-shortener" target="_blank"
@@ -498,12 +508,54 @@
           <div
             class="glass-card rounded-3xl overflow-hidden reveal group hover:border-primary/50 transition-all duration-500 shadow-xl">
             <div class="relative h-64 overflow-hidden">
+              <img src="./images/projects/claims.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Insurance Claims">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <span
+                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">03</span>
+              </div>
+            </div>
+            <div class="p-8 space-y-4">
+              <h3 class="text-2xl font-display font-bold">Insurance Claims Processing</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fab fa-java text-primary"></i> Java
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-leaf text-primary"></i> Spring Boot
+                </span>
+                <span
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <i class="fas fa-code text-primary"></i> JEE
+                </span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
+                An enterprise-grade automation engine designed to streamline insurance eligibility determination through
+                a complex rule-based workflow. Optimizes claim processing efficiency while ensuring strict adherence to
+                regulatory compliance and data integrity standards.
+              </p>
+              <div class="flex items-center gap-4 pt-4">
+                <a href="https://github.com/Arbaz4Sayyad/Insurance-Claims-Processing-System" target="_blank"
+                  class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="glass-card rounded-3xl overflow-hidden reveal group hover:border-primary/50 transition-all duration-500 shadow-xl">
+            <div class="relative h-64 overflow-hidden">
               <img src="./images/projects/foodies.png"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 alt="Foodies">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
                 <span
-                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">03</span>
+                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">04</span>
               </div>
             </div>
             <div class="p-8 space-y-4">
@@ -536,48 +588,6 @@
                   class="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-xl text-sm font-bold hover:bg-primary/20 transition-all flex items-center gap-2">
                   <i class="fas fa-play-circle"></i> Demo Video
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div
-            class="glass-card rounded-3xl overflow-hidden reveal group hover:border-primary/50 transition-all duration-500 shadow-xl">
-            <div class="relative h-64 overflow-hidden">
-              <img src="./images/projects/claims.png"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                alt="Insurance Claims">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
-                <span
-                  class="text-white text-5xl font-black opacity-20 group-hover:opacity-10 transition-opacity">04</span>
-              </div>
-            </div>
-            <div class="p-8 space-y-4">
-              <h3 class="text-2xl font-display font-bold">Insurance Claims Processing</h3>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
-                  <i class="fab fa-java text-primary"></i> Java
-                </span>
-                <span
-                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
-                  <i class="fas fa-leaf text-primary"></i> Spring Boot
-                </span>
-                <span
-                  class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
-                  <i class="fas fa-code text-primary"></i> JEE
-                </span>
-              </div>
-              <p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed text-sm">
-                An enterprise-grade automation engine designed to streamline insurance eligibility determination through
-                a complex rule-based workflow. Optimizes claim processing efficiency while ensuring strict adherence to
-                regulatory compliance and data integrity standards.
-              </p>
-              <div class="flex items-center gap-4 pt-4">
-                <a href="https://github.com/Arbaz4Sayyad/Insurance-Claims-Processing-System" target="_blank"
-                  class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
               </div>
             </div>
           </div>
@@ -715,6 +725,230 @@
               </div>
             </div>
           </div> -->
+        </div>
+      </section>
+
+      <!-- Open Source Contributions Section -->
+      <section id="opensource" class="py-20 scroll-mt-32">
+        <div class="text-center mb-16 space-y-4 reveal">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-semibold mb-4">
+            <i class="fab fa-github"></i>
+            Community Contributions
+          </div>
+          <h2 class="text-5xl md:text-6xl font-display font-black text-slate-800 dark:text-slate-100">Open <span
+              class="text-primary">Source</span></h2>
+          <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
+            Contributing back to the developer community — bug fixes, features, and improvements to open projects.
+          </p>
+        </div>
+
+        <!-- GitHub Stats Summary Bar -->
+        <div class="os-stats-bar glass-card rounded-3xl p-6 mb-12 reveal flex flex-wrap justify-center gap-8 md:gap-16">
+          <div class="flex flex-col items-center gap-1">
+            <span class="text-3xl font-display font-black text-primary">2</span>
+            <span
+              class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Repositories</span>
+          </div>
+          <div class="w-px h-10 bg-slate-200 dark:bg-slate-700 self-center hidden sm:block"></div>
+          <div class="flex flex-col items-center gap-1">
+            <span class="text-3xl font-display font-black text-primary">2</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">PRs
+              Merged</span>
+          </div>
+          <div class="w-px h-10 bg-slate-200 dark:bg-slate-700 self-center hidden sm:block"></div>
+          <div class="flex flex-col items-center gap-1">
+            <span class="text-3xl font-display font-black text-primary">2</span>
+            <span
+              class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Contributions</span>
+          </div>
+          <div class="w-px h-10 bg-slate-200 dark:bg-slate-700 self-center hidden sm:block"></div>
+          <div class="flex flex-col items-center gap-1">
+            <a href="https://github.com/Arbaz4Sayyad" target="_blank"
+              class="text-primary font-bold flex items-center gap-2 hover:underline text-sm">
+              <i class="fab fa-github text-lg"></i> View GitHub Profile
+            </a>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+          <!-- OS Contribution Card 1 -->
+          <div
+            class="os-card glass-card rounded-3xl p-8 reveal group hover:border-primary/50 transition-all duration-500 shadow-xl flex flex-col">
+            <!-- Card Header -->
+            <div class="flex items-start justify-between gap-4 mb-6">
+              <div
+                class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <i class="fab fa-github"></i>
+              </div>
+              <span
+                class="os-type-badge os-type-feature px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                <i class="fas fa-plus-circle"></i> Feature
+              </span>
+            </div>
+
+            <!-- Org badge -->
+            <div class="flex items-center gap-2 mb-4">
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                <i class="fas fa-building text-primary"></i> VMware · Spring Portfolio
+              </span>
+            </div>
+
+            <!-- Repo Info -->
+            <div class="mb-5">
+              <p class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">Repository
+              </p>
+              <a href="https://github.com/spring-projects/spring-kafka" target="_blank"
+                class="text-lg font-display font-bold text-slate-800 dark:text-slate-100 hover:text-primary transition-colors flex items-center gap-2">
+                spring-projects / spring-kafka
+                <i class="fas fa-external-link-alt text-xs opacity-50"></i>
+              </a>
+            </div>
+
+            <!-- Contribution Description -->
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+              Enhanced <strong>Kafka consumer observability</strong> in the Spring Kafka framework by implementing
+              structured logging with delivery attempt metadata for consumer failures. This production-ready feature
+              improves debugging in distributed environments, giving engineers richer context when messages fail
+              to process &mdash; reducing mean time to resolution in high-throughput Kafka deployments.
+            </p>
+
+            <!-- Tech Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                <i class="fab fa-java text-primary"></i> Java
+              </span>
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                <i class="fas fa-leaf text-primary"></i> Spring Kafka
+              </span>
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                <i class="fas fa-stream text-primary"></i> Apache Kafka
+              </span>
+            </div>
+
+            <!-- Repo Stats -->
+            <div
+              class="flex items-center gap-5 text-sm text-slate-500 dark:text-slate-400 mb-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+              <span class="flex items-center gap-1.5"><i class="fas fa-star text-yellow-400"></i> 3.8k+ Stars</span>
+              <span class="flex items-center gap-1.5"><i class="fas fa-code-branch text-primary"></i> 2.6k+ Forks</span>
+              <span class="flex items-center gap-1.5 font-bold text-primary"><i class="fas fa-code-merge"></i> 1 PR
+                Merged</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+              <a href="https://github.com/spring-projects/spring-kafka" target="_blank"
+                class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                <i class="fab fa-github"></i> View Repo
+              </a>
+              <a href="https://github.com/spring-projects/spring-kafka/pull/4396" target="_blank"
+                class="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-xl text-sm font-bold hover:bg-primary/20 transition-all flex items-center gap-2">
+                <i class="fas fa-code-merge"></i> PR #4396
+              </a>
+            </div>
+          </div>
+
+          <!-- OS Contribution Card 2 -->
+          <div
+            class="os-card glass-card rounded-3xl p-8 reveal group hover:border-primary/50 transition-all duration-500 shadow-xl flex flex-col">
+            <!-- Card Header -->
+            <div class="flex items-start justify-between gap-4 mb-6">
+              <div
+                class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <i class="fab fa-github"></i>
+              </div>
+              <span
+                class="os-type-badge os-type-bugfix px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                <i class="fas fa-shield-alt"></i> Code Quality
+              </span>
+            </div>
+
+            <!-- Org badge -->
+            <div class="flex items-center gap-2 mb-4">
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                <i class="fas fa-building text-primary"></i> VMware · Spring Portfolio
+              </span>
+            </div>
+
+            <!-- Repo Info -->
+            <div class="mb-5">
+              <p class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">Repository
+              </p>
+              <a href="https://github.com/spring-projects/spring-kafka" target="_blank"
+                class="text-lg font-display font-bold text-slate-800 dark:text-slate-100 hover:text-primary transition-colors flex items-center gap-2">
+                spring-projects / spring-kafka
+                <i class="fas fa-external-link-alt text-xs opacity-50"></i>
+              </a>
+            </div>
+
+            <!-- Contribution Description -->
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+              Fixed <strong>checkstyle violations</strong> in <span
+                class="text-primary font-mono bg-primary/10 px-1.5 py-0.5 rounded text-xs">RetryableTopicAnnotationProcessorTests</span>
+              to bring the test class into full compliance with Spring project coding standards.
+              Resolved code style inconsistencies preventing clean builds, ensuring the contribution
+              met DCO (Developer Certificate of Origin) requirements and passed maintainer review
+              &mdash; improving long-term code quality and reducing CI friction for the team.
+            </p>
+
+            <!-- Tech Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                <i class="fab fa-java text-primary"></i> Java
+              </span>
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                <i class="fas fa-leaf text-primary"></i> Spring Kafka
+              </span>
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                <i class="fas fa-check-double text-primary"></i> Checkstyle
+              </span>
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                <i class="fas fa-certificate text-primary"></i> DCO
+              </span>
+            </div>
+
+            <!-- Repo Stats -->
+            <div
+              class="flex items-center gap-5 text-sm text-slate-500 dark:text-slate-400 mb-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+              <span class="flex items-center gap-1.5"><i class="fas fa-star text-yellow-400"></i> 3.8k+ Stars</span>
+              <span class="flex items-center gap-1.5"><i class="fas fa-code-branch text-primary"></i> 2.6k+ Forks</span>
+              <span class="flex items-center gap-1.5 font-bold text-primary"><i class="fas fa-code-merge"></i> 1 PR
+                Merged</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+              <a href="https://github.com/spring-projects/spring-kafka" target="_blank"
+                class="px-5 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-xl text-sm font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                <i class="fab fa-github"></i> View Repo
+              </a>
+              <a href="https://github.com/spring-projects/spring-kafka/pull/4397" target="_blank"
+                class="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-xl text-sm font-bold hover:bg-primary/20 transition-all flex items-center gap-2">
+                <i class="fas fa-code-merge"></i> PR #4397
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-12 reveal">
+          <a href="https://github.com/Arbaz4Sayyad" target="_blank"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-slate-900 dark:bg-slate-800 text-white font-bold rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all">
+            <i class="fab fa-github text-xl"></i> See All Activity on GitHub
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </section>
 
@@ -1136,6 +1370,7 @@
           <a href="#about" class="hover:text-primary">About Me</a>
           <a href="#skills" class="hover:text-primary">Skills</a>
           <a href="#projects" class="hover:text-primary">Projects</a>
+          <a href="#opensource" class="hover:text-primary">Open Source</a>
           <a href="#experience" class="hover:text-primary">Experience</a>
           <a href="#education" class="hover:text-primary">Education</a>
           <a href="#research" class="hover:text-primary">Publications</a>
@@ -1160,10 +1395,12 @@
       <div class="relative w-[90%] max-w-4xl">
         <button onclick="closeVideoModal('meeting-notes-video')" class="close-video">&times;</button>
         <div class="video-container">
-          <iframe src="https://drive.google.com/file/d/1FHvGXISMotO7OLaQqvoh8OhpSmw_mzg7/preview" title="AI Meeting Notes Demo" allow="autoplay; encrypted-media"></iframe>
+          <iframe src="https://drive.google.com/file/d/1FHvGXISMotO7OLaQqvoh8OhpSmw_mzg7/preview"
+            title="AI Meeting Notes Demo" allow="autoplay; encrypted-media"></iframe>
         </div>
         <div class="mt-4 text-center">
-          <a href="https://drive.google.com/file/d/1FHvGXISMotO7OLaQqvoh8OhpSmw_mzg7/view" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
+          <a href="https://drive.google.com/file/d/1FHvGXISMotO7OLaQqvoh8OhpSmw_mzg7/view" target="_blank"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
             <i class="fas fa-external-link-alt"></i> View on Google Drive
           </a>
         </div>
@@ -1173,10 +1410,12 @@
       <div class="relative w-[90%] max-w-4xl">
         <button onclick="closeVideoModal('urlshortener-video')" class="close-video">&times;</button>
         <div class="video-container">
-          <iframe src="https://drive.google.com/file/d/1XfvMO6MYFFZemQoKJEJc62hloySlHjrS/preview" title="Link-Magic Demo" allow="autoplay; encrypted-media"></iframe>
+          <iframe src="https://drive.google.com/file/d/1XfvMO6MYFFZemQoKJEJc62hloySlHjrS/preview"
+            title="Link-Magic Demo" allow="autoplay; encrypted-media"></iframe>
         </div>
         <div class="mt-4 text-center">
-          <a href="https://drive.google.com/file/d/1XfvMO6MYFFZemQoKJEJc62hloySlHjrS/view" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
+          <a href="https://drive.google.com/file/d/1XfvMO6MYFFZemQoKJEJc62hloySlHjrS/view" target="_blank"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
             <i class="fas fa-external-link-alt"></i> View on Google Drive
           </a>
         </div>
@@ -1186,10 +1425,12 @@
       <div class="relative w-[90%] max-w-4xl">
         <button onclick="closeVideoModal('foodies-video')" class="close-video">&times;</button>
         <div class="video-container">
-          <iframe src="https://drive.google.com/file/d/1MKTG0K-Msn98wtnfRDeN2f40fF8ryWcW/preview" title="Foodies Demo" allow="autoplay; encrypted-media"></iframe>
+          <iframe src="https://drive.google.com/file/d/1MKTG0K-Msn98wtnfRDeN2f40fF8ryWcW/preview" title="Foodies Demo"
+            allow="autoplay; encrypted-media"></iframe>
         </div>
         <div class="mt-4 text-center">
-          <a href="https://drive.google.com/file/d/1MKTG0K-Msn98wtnfRDeN2f40fF8ryWcW/view" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
+          <a href="https://drive.google.com/file/d/1MKTG0K-Msn98wtnfRDeN2f40fF8ryWcW/view" target="_blank"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
             <i class="fas fa-external-link-alt"></i> View on Google Drive
           </a>
         </div>
@@ -1199,10 +1440,12 @@
       <div class="relative w-[90%] max-w-4xl">
         <button onclick="closeVideoModal('ellison-video')" class="close-video">&times;</button>
         <div class="video-container">
-          <iframe src="https://drive.google.com/file/d/1NgrKjzRKydkXtfPCIZwWRFL659pOpHXa/preview" title="Ellison Electronics Demo" allow="autoplay; encrypted-media"></iframe>
+          <iframe src="https://drive.google.com/file/d/1NgrKjzRKydkXtfPCIZwWRFL659pOpHXa/preview"
+            title="Ellison Electronics Demo" allow="autoplay; encrypted-media"></iframe>
         </div>
         <div class="mt-4 text-center">
-          <a href="https://drive.google.com/file/d/1NgrKjzRKydkXtfPCIZwWRFL659pOpHXa/view" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
+          <a href="https://drive.google.com/file/d/1NgrKjzRKydkXtfPCIZwWRFL659pOpHXa/view" target="_blank"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
             <i class="fas fa-external-link-alt"></i> View on Google Drive
           </a>
         </div>
@@ -1212,10 +1455,12 @@
       <div class="relative w-[90%] max-w-4xl">
         <button onclick="closeVideoModal('memories-video')" class="close-video">&times;</button>
         <div class="video-container">
-          <iframe src="https://drive.google.com/file/d/1NaR0m4uLxJ579O_WMY4MTAEd8vHl5R6y/preview" title="Memories Demo" allow="autoplay; encrypted-media"></iframe>
+          <iframe src="https://drive.google.com/file/d/1NaR0m4uLxJ579O_WMY4MTAEd8vHl5R6y/preview" title="Memories Demo"
+            allow="autoplay; encrypted-media"></iframe>
         </div>
         <div class="mt-4 text-center">
-          <a href="https://drive.google.com/file/d/1NaR0m4uLxJ579O_WMY4MTAEd8vHl5R6y/view" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
+          <a href="https://drive.google.com/file/d/1NaR0m4uLxJ579O_WMY4MTAEd8vHl5R6y/view" target="_blank"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-all">
             <i class="fas fa-external-link-alt"></i> View on Google Drive
           </a>
         </div>
@@ -1235,6 +1480,7 @@
       <a href="#about" class="mobile-link hover:text-primary transition-colors">About Me</a>
       <a href="#skills" class="mobile-link hover:text-primary transition-colors">Skills</a>
       <a href="#projects" class="mobile-link hover:text-primary transition-colors">Projects</a>
+      <a href="#opensource" class="mobile-link hover:text-primary transition-colors">Open Source</a>
       <a href="#experience" class="mobile-link hover:text-primary transition-colors">Experience</a>
       <a href="#education" class="mobile-link hover:text-primary transition-colors">Education</a>
       <a href="#research" class="mobile-link hover:text-primary transition-colors">Publications</a>
