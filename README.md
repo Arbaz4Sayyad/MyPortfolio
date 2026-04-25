@@ -85,7 +85,7 @@ PortFolio/
 
 Willing to collaborate on innovative projects or discuss software engineering opportunities!
 
-- **Email**: [arbazsayyad440@gmail.com](mailto:arbazsayyad440@gmail.com)
+- **Email**: [arbaz4sayyad@gmail.com](mailto:arbaz4sayyad@gmail.com)
 - **LinkedIn**: [/in/arbaz-sayyad](https://www.linkedin.com/in/arbaz-sayyad)
 - **Repo**: [GitHub Projects](https://github.com/Arbaz4Sayyad?tab=repositories)
 
